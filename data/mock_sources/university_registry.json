@@ -1,0 +1,114 @@
+{
+  "STU": {
+    "name": "Sampurna Technical University",
+    "available": true,
+    "letters": {
+      "STU/AFF/2027/929": {
+        "institution_id": "INST01",
+        "institution_name": "Shri Ram Institute of Technology",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech ME": 60
+        },
+        "issue_date": "2026-09-18"
+      },
+      "STU/AFF/2027/590": {
+        "institution_id": "INST02",
+        "institution_name": "Navgarh College of Engineering",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech ECE": 60
+        },
+        "issue_date": "2026-09-15"
+      },
+      "STU/AFF/2027/586": {
+        "institution_id": "INST03",
+        "institution_name": "Dhanpur Institute of Engineering & Management",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 120,
+          "MBA": 60
+        },
+        "issue_date": "2026-09-18"
+      },
+      "STU/AFF/2027/373": {
+        "institution_id": "INST04",
+        "institution_name": "Ambikapuri Engineering College",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech CE": 60
+        },
+        "issue_date": "2026-09-09"
+      },
+      "STU/AFF/2027/244": {
+        "institution_id": "INST05",
+        "institution_name": "Sitapur Nagar Polytechnic & Engineering College",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech ME": 60,
+          "B.Tech CE": 60
+        },
+        "issue_date": "2026-09-04"
+      },
+      "STU/AFF/2027/557": {
+        "institution_id": "INST06",
+        "institution_name": "Devgarh Institute of Technology",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech IT": 60
+        },
+        "issue_date": "2026-09-21"
+      },
+      "STU/AFF/2027/512": {
+        "institution_id": "INST07",
+        "institution_name": "Rajkot Kalan College of Engineering",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech ECE": 60
+        },
+        "issue_date": "2026-09-08"
+      },
+      "STU/AFF/2027/796": {
+        "institution_id": "INST08",
+        "institution_name": "Ambikapuri Institute of Information Technology",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech IT": 60,
+          "B.Tech CSE": 60
+        },
+        "issue_date": "2026-09-04"
+      },
+      "STU/AFF/2027/771": {
+        "institution_id": "INST09",
+        "institution_name": "Navgarh Women's Engineering College",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech ECE": 60
+        },
+        "issue_date": "2026-09-13"
+      }
+    }
+  },
+  "KVU": {
+    "name": "Kaveri Valley University",
+    "available": false,
+    "letters": {
+      "KVU/AFF/2027/940": {
+        "institution_id": "INST10",
+        "institution_name": "Kaveri Valley School of Engineering",
+        "session": "2027-28",
+        "programmes": {
+          "B.Tech CSE": 60,
+          "B.Tech ME": 60
+        },
+        "issue_date": "2026-09-22"
+      }
+    }
+  }
+}

@@ -1,0 +1,513 @@
+[
+  {
+    "institution_id": "INST01",
+    "doc_type": "fire_noc",
+    "file": "applications/INST01/documents/fire_noc.pdf",
+    "sha256": "4ab97712551d87fc07031c752e3fdc6829dad43ff802b81b287d20eb30174789",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "land_deed",
+    "file": "applications/INST01/documents/land_deed.pdf",
+    "sha256": "3ca2e160e1900e93f081f1f74e69bdb3c9db69409bc41cd268a3be3f29585a04",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST01/documents/affiliation_letter.pdf",
+    "sha256": "c327baf7bc5e4cff65d31e423a169accf28a54ba06c19652047756b69c174d78",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "accreditation_certificate",
+    "file": "applications/INST01/documents/accreditation_certificate.pdf",
+    "sha256": "0ce8ff75d72b2e2157b4fa42551500a340bc04f0efda6c812131e046e4626036",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "faculty_list",
+    "file": "applications/INST01/documents/faculty_list.pdf",
+    "sha256": "1b7427dd365aa0664f63c247e6858a46b06c2b349c2074699e3518b4ebce1401",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "affidavit",
+    "file": "applications/INST01/documents/affidavit.pdf",
+    "sha256": "579ab6b51f338c2eee30cdbdd9cee1bb73e44a113387c4f161625851ee3a8b59",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST01/photos/computer_lab.jpg",
+    "sha256": "060f8a3cb26cbf313e0acc5736bf18eef3c2abbae33d038c5c693a168df4c38d",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST01",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST01/photos/classroom.jpg",
+    "sha256": "bf93fe8d7509cb781c00225ae744c7038fcd18c437e5a8d99659585c70c89bb6",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "fire_noc",
+    "file": "applications/INST02/documents/fire_noc.pdf",
+    "sha256": "3f366585ea52218ce3f5cdd5d2e4517cb86786a38b2f6b7a5a1fa12f0c6f8632",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "land_deed",
+    "file": "applications/INST02/documents/land_deed.pdf",
+    "sha256": "b8f1763dc0d6e1cb6bfdc716113aa84c9bb67be608e3f5a2c6f8c536a3b259dc",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST02/documents/affiliation_letter.pdf",
+    "sha256": "460ed3b2d8fd0a2bca33fa5d8cb12f94a62eb5f779a118c443713941aaa316ff",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "accreditation_certificate",
+    "file": "applications/INST02/documents/accreditation_certificate.pdf",
+    "sha256": "c324305d4d2b48f27c114696482509facfe1d21e271abc0509d01607ce144656",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "faculty_list",
+    "file": "applications/INST02/documents/faculty_list.pdf",
+    "sha256": "70762a84bb91b76a62024f07c088727a69e6baf1fc37a98ff4485f95c7d5771a",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "affidavit",
+    "file": "applications/INST02/documents/affidavit.pdf",
+    "sha256": "a327354f233e1c2a6e6ae24d76b0856ddc9830d8b3a2ad2d1473cd92c70a781a",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST02/photos/computer_lab.jpg",
+    "sha256": "2a4157072251d1239684e11088d700d73b19fedc5b08cea92661180341b2f849",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST02",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST02/photos/classroom.jpg",
+    "sha256": "3106460156c005b7cab7e62597eb430342baa1b454c699c1b7ee942dec5ddf52",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "fire_noc",
+    "file": "applications/INST03/documents/fire_noc.pdf",
+    "sha256": "d749fee7d94310411f4f9495cd3d60633a0c1db428b836fe666cb849d4bcbc7f",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "land_deed",
+    "file": "applications/INST03/documents/land_deed.pdf",
+    "sha256": "1266706aa9e31db1b6a602b548dfd366a450f1c3a2106e7463aa832bc577ea5c",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST03/documents/affiliation_letter.pdf",
+    "sha256": "9be28d7e21c8e18f975866d1ddf5f628ae55945e363a87cc0491e4ed121075bd",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "faculty_list",
+    "file": "applications/INST03/documents/faculty_list.pdf",
+    "sha256": "f874f6a4c3f2f7ec7ce7a0e5ceba79519b7c9ce0cf12234f53c9c6a2219b7e8d",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "affidavit",
+    "file": "applications/INST03/documents/affidavit.pdf",
+    "sha256": "498aa0514a0abc6f753767687bfc4fb347d05e673cb223e95028ed78aba760bf",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST03/photos/computer_lab.jpg",
+    "sha256": "c752d533962aeeac27eb03a00e90ec67cfc314a6c1f2e36891a066ff73842265",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST03",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST03/photos/classroom.jpg",
+    "sha256": "2cd156de072db21b932cfc0007c2479fee8ce1354e66d93962d79153baa73488",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "fire_noc",
+    "file": "applications/INST04/documents/fire_noc.pdf",
+    "sha256": "8fb63db25f9ce9adcc012625e80f46c984b32bb384cd687cbd855e93604641d7",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "land_deed",
+    "file": "applications/INST04/documents/land_deed.pdf",
+    "sha256": "e64cffa6a04b42e08b2ff37eb86de9f57481b3c0ea006d164ba5aa7eb20ab5ea",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST04/documents/affiliation_letter.pdf",
+    "sha256": "c13abfbe14b0232f1867ac30bea1187a2babdcec9ab796598c705197f7d8146f",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "faculty_list",
+    "file": "applications/INST04/documents/faculty_list.pdf",
+    "sha256": "7be1fe5794f2b35b66149af7dae5c684790c231c1da81b05eedfafbcdc453da5",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "affidavit",
+    "file": "applications/INST04/documents/affidavit.pdf",
+    "sha256": "843686927743a58a7a9a10c4d271783ca5c892737433399a416d08bfa339f509",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST04/photos/computer_lab.jpg",
+    "sha256": "69a7c1eac5ab7cad44ad486b435549037b5fe1fc22c6cbf335030ef9f9562347",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST04",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST04/photos/classroom.jpg",
+    "sha256": "7ec4b681cb7e92bd3c168ddcc0a5e6824972a7f4a9cd36cc127737f46dd1fe21",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "fire_noc",
+    "file": "applications/INST05/documents/fire_noc.pdf",
+    "sha256": "1658b4ae1431a0d9ff59f989a4f103f74d32f0e2838a281b4956cebb919c3a4e",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "land_deed",
+    "file": "applications/INST05/documents/land_deed.pdf",
+    "sha256": "fcc1d473eb54b316acd91fa5f51840c20525279946dee6162b83aefd638503f7",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST05/documents/affiliation_letter.pdf",
+    "sha256": "e53226f6a6ce41ee3ce35bf3e268720d899e792339684bd78f896518a47ac116",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "faculty_list",
+    "file": "applications/INST05/documents/faculty_list.pdf",
+    "sha256": "419b5a5b4054900c33f8549d3c30c665a03abde02f97407703992d03ad36fecd",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "affidavit",
+    "file": "applications/INST05/documents/affidavit.pdf",
+    "sha256": "7db137e5473b793a1d8aae76818eab4201375c6d83a4b6c18978da27ea42a185",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST05/photos/computer_lab.jpg",
+    "sha256": "a99c12c16da986f1bc5c22e421cbd2734746cb48532598fc5e9223a3f017f8a2",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST05",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST05/photos/classroom.jpg",
+    "sha256": "4777f335707cd2c109f19cbdf55a3e4a054257392c898f5069f56223104f042c",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "fire_noc",
+    "file": "applications/INST06/documents/fire_noc.pdf",
+    "sha256": "8ca5858d365a94b9b2907f7af6cdfd747671f76cda7db6dbd4da00f0a3e89cf4",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "land_deed",
+    "file": "applications/INST06/documents/land_deed.pdf",
+    "sha256": "39ba126a8f747137e4b7c63d5f2161c20503cd52fa089364b7c72a98ec3f1adb",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST06/documents/affiliation_letter.pdf",
+    "sha256": "97a1e2217b617aecaef72664d12c5ba0b70e5d94d295ee3a09549b5bed7091e1",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "faculty_list",
+    "file": "applications/INST06/documents/faculty_list.pdf",
+    "sha256": "7f761fe6821323f073fa3678514866893343409694a2bfc0b93dbcd3fccf4de3",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "affidavit",
+    "file": "applications/INST06/documents/affidavit.pdf",
+    "sha256": "fb33962efe55ae1330af9e048f667bee530d69c2ac3d011960a622891b947212",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST06/photos/computer_lab.jpg",
+    "sha256": "713af7a8b4c09effcc09c413d599405a1651053b4c8a67acf64ba5015514a70c",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST06",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST06/photos/classroom.jpg",
+    "sha256": "ac8586f075a28f19072fcbe6b4cd025b97c94cdc3f96f39a813fad1dca891cf6",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "fire_noc",
+    "file": "applications/INST07/documents/fire_noc.pdf",
+    "sha256": "05403f70c279c2a8e54996dd8393a85d04d74af720c26b70c47ce84b87dca584",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "land_deed",
+    "file": "applications/INST07/documents/land_deed.pdf",
+    "sha256": "f68e7273b4246541b282a8a3649445ab36e06f9ac3e9b5d451b86cd394eedef3",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST07/documents/affiliation_letter.pdf",
+    "sha256": "f4f433dc9a9e9eca03d5c58fa4ef168d338304e8a7de456838898321932ff55b",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "faculty_list",
+    "file": "applications/INST07/documents/faculty_list.pdf",
+    "sha256": "77bc8e5f1a50fb0ec832bcfe1128881886b4b71aef55b54d17580de4770b0d98",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "affidavit",
+    "file": "applications/INST07/documents/affidavit.pdf",
+    "sha256": "d1bf50a55ee73ca4da00da4f833081b5401454c113509e007a345b61364c9344",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST07/photos/computer_lab.jpg",
+    "sha256": "6909a1b121649ef63b497d010dd14f308de9b2a4ce7cb33f7608ed26e0e8c3e9",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST07",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST07/photos/classroom.jpg",
+    "sha256": "4cd776ed6743ff4d20992304150f690f1f4dce7b1350d6e4c6ad8ce17638ead4",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "fire_noc",
+    "file": "applications/INST08/documents/fire_noc.pdf",
+    "sha256": "1af15eabd758b9141c35057f117364dee414ecdefcbdba0e7a2b6f03857e975d",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "land_deed",
+    "file": "applications/INST08/documents/land_deed.pdf",
+    "sha256": "f13e24fcce28713f25c9b0e37acfef269949c51183c5f53e98c3453eb4fac0b4",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST08/documents/affiliation_letter.pdf",
+    "sha256": "97275c59891acc7ca2920997401e9ce606166fd3b5a675fe498d821696e4654a",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "faculty_list",
+    "file": "applications/INST08/documents/faculty_list.pdf",
+    "sha256": "585b6c5d2bea72136da2a370af2eb57464251f52c8132a290aea60ec66de887b",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "affidavit",
+    "file": "applications/INST08/documents/affidavit.pdf",
+    "sha256": "b2d607084d283ea6cb3e9ccb30836b7d6112166337dd22f74f980e8194ee06db",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST08/photos/computer_lab.jpg",
+    "sha256": "e534fc8a87b3515a8c91d9da6355f5ef8c046203b6073ae5b850e03509924215",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST08",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST08/photos/classroom.jpg",
+    "sha256": "63a0520e35adcb0f23282477de5cd45f27e880add00ea1c1a71d0e4dfc8acf54",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "fire_noc",
+    "file": "applications/INST09/documents/fire_noc.pdf",
+    "sha256": "3cac523b2771a4fae466f8e24c67a480d192c0beccea9359955177c57197d567",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "land_deed",
+    "file": "applications/INST09/documents/land_deed.pdf",
+    "sha256": "2470be68f164120eaaedb683a1f3cdaf16c27cd6f7f24509c577ce353b133d0e",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST09/documents/affiliation_letter.pdf",
+    "sha256": "a8ded4df6afb6a7ff88a3ba5582f04c56c14d38a627c867beadd32e38da05ac0",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "faculty_list",
+    "file": "applications/INST09/documents/faculty_list.pdf",
+    "sha256": "c40c947752e8586577c35cedc5d425d996924febc418c4df23c6e1f546d1ca63",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "affidavit",
+    "file": "applications/INST09/documents/affidavit.pdf",
+    "sha256": "f375ecab805e3349577c8f2185e1e849e0eb62837f84b99613eab6ad0f255b92",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST09/photos/computer_lab.jpg",
+    "sha256": "577cff3d2d2b0bc533743c17456430d9b2b5f6acb2c456478b8de138ae0a2a0a",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST09",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST09/photos/classroom.jpg",
+    "sha256": "b4d493c696a7a310362377df0606947bb8bef26979aa8522c624323aaa0e0edf",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "fire_noc",
+    "file": "applications/INST10/documents/fire_noc.pdf",
+    "sha256": "f88034a9fa790b80e883e123e7ab5729f9c747d9b2659d94000d8b4239361b22",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "land_deed",
+    "file": "applications/INST10/documents/land_deed.pdf",
+    "sha256": "9853790e54970b2fb8bbdc0c48f401022a09d829a9faf7ceb6213357de55e3eb",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "affiliation_letter",
+    "file": "applications/INST10/documents/affiliation_letter.pdf",
+    "sha256": "65d56610fc7339e6a0a58b1797247f41f483614729b60d61e6b9673768d478ee",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "accreditation_certificate",
+    "file": "applications/INST10/documents/accreditation_certificate.pdf",
+    "sha256": "72a7bc787aa9f7af47d1ffec356ebfb4129aa38e4815043da0f05bf3d8839160",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "faculty_list",
+    "file": "applications/INST10/documents/faculty_list.pdf",
+    "sha256": "ca319bcd31cfb65bb3fe00112adfc9bb4878fa8cd99c08927e73f1326fdd8a95",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "affidavit",
+    "file": "applications/INST10/documents/affidavit.pdf",
+    "sha256": "4a80190b8943ece7c5484b421ae43af8804a27639fbfd2ada1d5b92fdbe37580",
+    "scanned": true
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "photo:computer_lab",
+    "file": "applications/INST10/photos/computer_lab.jpg",
+    "sha256": "f6779c42c502200f207e258e62671f3f6bb6ef7a9fd43685edc10c154ca64d54",
+    "scanned": false
+  },
+  {
+    "institution_id": "INST10",
+    "doc_type": "photo:classroom",
+    "file": "applications/INST10/photos/classroom.jpg",
+    "sha256": "1a8df4aa203cecc1c4cdbc55fe93873674955c4b2abc6eba6693d0a6706eed92",
+    "scanned": false
+  }
+]

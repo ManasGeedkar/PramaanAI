@@ -1,0 +1,26 @@
+{
+  "BPAC/ACC/2024/4198": {
+    "institution_id": "INST01",
+    "institution_name": "Shri Ram Institute of Technology",
+    "programme": "B.Tech CSE",
+    "valid_from": "2024-07-01",
+    "valid_till": "2029-06-30",
+    "status": "ACCREDITED"
+  },
+  "BPAC/ACC/2025/8926": {
+    "institution_id": "INST02",
+    "institution_name": "Navgarh College of Engineering",
+    "programme": "B.Tech CSE",
+    "valid_from": "2025-07-01",
+    "valid_till": "2028-06-30",
+    "status": "ACCREDITED"
+  },
+  "BPAC/ACC/2025/4050": {
+    "institution_id": "INST10",
+    "institution_name": "Kaveri Valley School of Engineering",
+    "programme": "B.Tech CSE",
+    "valid_from": "2025-01-01",
+    "valid_till": "2028-12-31",
+    "status": "ACCREDITED"
+  }
+}

@@ -1,0 +1,41 @@
+# Cross-document and record consistency checks.
+cross_document:
+  - field: land_area_acres
+    sources: [land_deed.land_area_acres, affidavit.land_area_acres, app.declared.land_area_acres]
+    source_of_truth: land_deed.land_area_acres
+    tolerance: 0.01
+    severity: critical
+  - field: built_up_area_sqm
+    sources: [fire_noc.built_up_area_sqm, affidavit.built_up_area_sqm, app.declared.built_up_area_sqm]
+    tolerance: 0
+    severity: warning
+  - field: faculty_count
+    sources: [faculty_list.faculty_count, affidavit.faculty_count, app.declared.faculty_count]
+    tolerance: 0
+    severity: warning
+  - field: fire_noc_no
+    sources: [fire_noc.noc_no, affidavit.fire_noc_no]
+    tolerance: 0
+    severity: warning
+  - field: institution_name
+    sources: [fire_noc.institution_name, affiliation_letter.institution_name,
+              accreditation_certificate.institution_name, app.institution.name]
+    match: fuzzy        # rapidfuzz token_sort_ratio >= 90
+    severity: warning
+
+records:                # against mock_sources/aicte_records.json (key = aicte_permanent_id)
+  - check: existing_intake_matches_previous_approval
+    compare: [app.declared.total_existing_intake, sum(previous_year.approved_intake)]
+    severity: critical
+  - check: previous_year_record_present
+    severity: warning
+  - check: ter_payment_paid
+    severity: warning
+
+entities:               # cross-application entity graph (same academic year only)
+  faculty:      {match: "faculty_id exact AND (name fuzzy >= 90) AND dob exact", severity: warning}
+  fire_noc_no:  {match: exact, severity: critical}
+  deed_no:      {match: exact, severity: critical}
+  survey_no:    {match: "exact within same district", severity: warning}
+  photo:        {match: "pHash hamming distance <= 6", severity: warning}
+  # Never flag on name alone: INST01 and INST05 both have a 'Rajesh Sharma' (different people).

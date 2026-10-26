@@ -1,0 +1,68 @@
+{
+  "application_id": "APP-2027-0008",
+  "academic_year": "2027-28",
+  "category": "EoA",
+  "submitted_on": "2026-10-04",
+  "institution": {
+    "id": "INST08",
+    "aicte_permanent_id": "1-SP-0001008",
+    "name": "Ambikapuri Institute of Information Technology",
+    "trust": "Shree Vidya Bharati Trust",
+    "district": "Ambikapuri",
+    "state": "Sampurna Pradesh",
+    "university": "Sampurna Technical University"
+  },
+  "programmes": [
+    {
+      "name": "B.Tech IT",
+      "existing_intake_claimed": 60,
+      "proposed_intake": 60
+    },
+    {
+      "name": "B.Tech CSE",
+      "existing_intake_claimed": 60,
+      "proposed_intake": 60
+    }
+  ],
+  "declared": {
+    "land_area_acres": 3.6,
+    "built_up_area_sqm": 10400,
+    "faculty_count": 10,
+    "total_existing_intake": 120,
+    "total_proposed_intake": 120
+  },
+  "documents": [
+    {
+      "doc_type": "fire_noc",
+      "file": "documents/fire_noc.pdf"
+    },
+    {
+      "doc_type": "land_deed",
+      "file": "documents/land_deed.pdf"
+    },
+    {
+      "doc_type": "affiliation_letter",
+      "file": "documents/affiliation_letter.pdf"
+    },
+    {
+      "doc_type": "faculty_list",
+      "file": "documents/faculty_list.pdf"
+    },
+    {
+      "doc_type": "affidavit",
+      "file": "documents/affidavit.pdf"
+    }
+  ],
+  "photos": [
+    {
+      "type": "computer_lab",
+      "file": "photos/computer_lab.jpg",
+      "claimed_computers": 24
+    },
+    {
+      "type": "classroom",
+      "file": "photos/classroom.jpg",
+      "claimed_seats": 60
+    }
+  ]
+}

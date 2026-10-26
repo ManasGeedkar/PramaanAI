@@ -1,0 +1,16 @@
+# Explainable risk triage. score = sum of points; band by thresholds.
+points:
+  critical_finding: 30
+  warning_finding: 10
+  info_finding: 0
+  expired_statutory_doc: 25        # added once per application if a statutory doc (Fire NOC) is expired
+  source_mismatch: 25
+  duplicate_entity: 15            # added once per ENTITY_REUSE / DUPLICATE_IMAGE finding (any severity)
+  missing_previous_year_record: 10
+  source_unavailable: 0            # not the institution's fault - do not penalise
+  verification_pending: 0
+bands: {High: 60, Medium: 20, Low: 0}
+manual_effort_assumptions:
+  minutes_per_document_manual: 6
+  minutes_per_flagged_item_review: 4
+  note: "Hours saved = (all docs x 6 min) - (flagged items x 4 min). Simulated estimate for the prototype."

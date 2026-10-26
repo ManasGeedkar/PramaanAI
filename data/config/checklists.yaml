@@ -1,0 +1,20 @@
+# Application category -> required / optional documents. Versioned like the Handbook.
+handbook_version: "Illustrative-2027-28 (replace with AICTE Approval Process Handbook values)"
+effective_from: "2026-09-01"
+session_start: "2027-07-01"
+
+categories:
+  EoA:
+    label: Extension of Approval (no change)
+    required: [fire_noc, land_deed, affiliation_letter, faculty_list, affidavit]
+    optional: [accreditation_certificate]
+    photos_required: [computer_lab, classroom]
+  EoA_INTAKE_INCREASE:
+    label: Extension of Approval with increase in intake
+    required: [fire_noc, land_deed, affiliation_letter, faculty_list, affidavit, accreditation_certificate]
+    optional: []
+    photos_required: [computer_lab, classroom]
+
+validity:                       # documents that must be valid on session_start
+  fire_noc: valid_till
+  accreditation_certificate: valid_till

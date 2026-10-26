@@ -1,0 +1,204 @@
+{
+  "1-SP-0001001": {
+    "institution_id": "INST01",
+    "name": "Shri Ram Institute of Technology",
+    "trust": "Shri Ram Shiksha Samiti",
+    "district": "Navgarh",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech ME": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/15982"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 210000,
+      "txn_ref": "TER-MOCK-642839"
+    }
+  },
+  "1-SP-0001002": {
+    "institution_id": "INST02",
+    "name": "Navgarh College of Engineering",
+    "trust": "Navgarh Vidya Trust",
+    "district": "Navgarh",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech ECE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/17963"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 210000,
+      "txn_ref": "TER-MOCK-366201"
+    }
+  },
+  "1-SP-0001003": {
+    "institution_id": "INST03",
+    "name": "Dhanpur Institute of Engineering & Management",
+    "trust": "Dhanpur Education Society",
+    "district": "Dhanpur",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 120,
+        "MBA": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/70158"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 210000,
+      "txn_ref": "TER-MOCK-334249"
+    }
+  },
+  "1-SP-0001004": {
+    "institution_id": "INST04",
+    "name": "Ambikapuri Engineering College",
+    "trust": "Ambika Shiksha Prasar Mandal",
+    "district": "Ambikapuri",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech CE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/88904"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 210000,
+      "txn_ref": "TER-MOCK-168334"
+    }
+  },
+  "1-SP-0001005": {
+    "institution_id": "INST05",
+    "name": "Sitapur Nagar Polytechnic & Engineering College",
+    "trust": "Sitapur Gramin Vikas Trust",
+    "district": "Sitapur Nagar",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech ME": 60,
+        "B.Tech CE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/73017"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 150000,
+      "txn_ref": "TER-MOCK-667214"
+    }
+  },
+  "1-SP-0001006": {
+    "institution_id": "INST06",
+    "name": "Devgarh Institute of Technology",
+    "trust": "Devgarh Takniki Shiksha Samiti",
+    "district": "Devgarh",
+    "state": "Sampurna Pradesh",
+    "previous_year": null,
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 150000,
+      "txn_ref": "TER-MOCK-963409"
+    }
+  },
+  "1-SP-0001007": {
+    "institution_id": "INST07",
+    "name": "Rajkot Kalan College of Engineering",
+    "trust": "Kalan Shiksha Nyas",
+    "district": "Rajkot Kalan",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech ECE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/85240"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 210000,
+      "txn_ref": "TER-MOCK-613419"
+    }
+  },
+  "1-SP-0001008": {
+    "institution_id": "INST08",
+    "name": "Ambikapuri Institute of Information Technology",
+    "trust": "Shree Vidya Bharati Trust",
+    "district": "Ambikapuri",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech IT": 60,
+        "B.Tech CSE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/50027"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 180000,
+      "txn_ref": "TER-MOCK-140391"
+    }
+  },
+  "1-SP-0001009": {
+    "institution_id": "INST09",
+    "name": "Navgarh Women's Engineering College",
+    "trust": "Matrushakti Shiksha Trust",
+    "district": "Navgarh",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech ECE": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/45496"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 180000,
+      "txn_ref": "TER-MOCK-408807"
+    }
+  },
+  "1-SP-0001010": {
+    "institution_id": "INST10",
+    "name": "Kaveri Valley School of Engineering",
+    "trust": "Kaveri Valley Education Foundation",
+    "district": "Dhanpur",
+    "state": "Sampurna Pradesh",
+    "previous_year": {
+      "academic_year": "2026-27",
+      "eoa_status": "Approved",
+      "approved_intake": {
+        "B.Tech CSE": 60,
+        "B.Tech ME": 60
+      },
+      "approval_letter_no": "AICTE-MOCK/EoA/2026-27/91392"
+    },
+    "ter_payment_2027_28": {
+      "status": "PAID",
+      "amount_inr": 180000,
+      "txn_ref": "TER-MOCK-569099"
+    }
+  }
+}

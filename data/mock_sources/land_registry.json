@@ -1,0 +1,82 @@
+{
+  "SPREG/NAV/2007/32289": {
+    "owner": "Shri Ram Shiksha Samiti",
+    "survey_no": "Khasra No. 720/7",
+    "district": "Navgarh",
+    "land_area_acres": 6.2,
+    "registration_date": "2007-09-19",
+    "response": "OK"
+  },
+  "SPREG/NAV/2007/92600": {
+    "owner": "Navgarh Vidya Trust",
+    "survey_no": "Khasra No. 196/8",
+    "district": "Navgarh",
+    "land_area_acres": 8.0,
+    "registration_date": "2007-03-14",
+    "response": "OK"
+  },
+  "SPREG/DHA/2007/84284": {
+    "owner": "Dhanpur Education Society",
+    "survey_no": "Khasra No. 840/6",
+    "district": "Dhanpur",
+    "land_area_acres": 5.5,
+    "registration_date": "2007-04-05",
+    "response": "OK"
+  },
+  "SPREG/AMB/2011/76005": {
+    "owner": "Ambika Shiksha Prasar Mandal",
+    "survey_no": "Khasra No. 638/8",
+    "district": "Ambikapuri",
+    "land_area_acres": 4.8,
+    "registration_date": "2011-04-06",
+    "response": "OK"
+  },
+  "SPREG/SIT/2010/85694": {
+    "owner": "Sitapur Gramin Vikas Trust",
+    "survey_no": "Khasra No. 437/1",
+    "district": "Sitapur Nagar",
+    "land_area_acres": 2.0,
+    "registration_date": "2010-12-02",
+    "response": "PENDING"
+  },
+  "SPREG/DEV/2010/99431": {
+    "owner": "Devgarh Takniki Shiksha Samiti",
+    "survey_no": "Khasra No. 637/4",
+    "district": "Devgarh",
+    "land_area_acres": 5.0,
+    "registration_date": "2010-05-03",
+    "response": "OK"
+  },
+  "SPREG/RAJ/2006/14965": {
+    "owner": "Kalan Shiksha Nyas",
+    "survey_no": "Khasra No. 344/4",
+    "district": "Rajkot Kalan",
+    "land_area_acres": 4.0,
+    "registration_date": "2006-09-09",
+    "response": "OK"
+  },
+  "SPREG/AMB/2016/40061": {
+    "owner": "Shree Vidya Bharati Trust",
+    "survey_no": "Khasra No. 517/3",
+    "district": "Ambikapuri",
+    "land_area_acres": 3.6,
+    "registration_date": "2016-09-19",
+    "response": "OK"
+  },
+  "SPREG/NAV/2009/16363": {
+    "owner": "Matrushakti Shiksha Trust",
+    "survey_no": "Khasra No. 543/3",
+    "district": "Navgarh",
+    "land_area_acres": 4.5,
+    "registration_date": "2009-03-24",
+    "response": "OK"
+  },
+  "SPREG/DHA/2013/32079": {
+    "owner": "Kaveri Valley Education Foundation",
+    "survey_no": "Khasra No. 474/9",
+    "district": "Dhanpur",
+    "land_area_acres": 5.2,
+    "registration_date": "2013-07-25",
+    "response": "OK"
+  }
+}

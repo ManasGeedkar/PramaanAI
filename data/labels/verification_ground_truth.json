@@ -1,0 +1,154 @@
+{
+  "INST01": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    },
+    "accreditation_certificate": {
+      "status": "verified",
+      "reason": "Accreditation registry matches"
+    }
+  },
+  "INST02": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    },
+    "accreditation_certificate": {
+      "status": "verified",
+      "reason": "Accreditation registry matches"
+    }
+  },
+  "INST03": {
+    "fire_noc": {
+      "status": "expired",
+      "reason": "Registry status EXPIRED (valid till 2026-03-31)"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST04": {
+    "fire_noc": {
+      "status": "mismatch",
+      "reason": "Printed Valid Till 31-03-2028; QR and registry say 2026-03-31 (expired)"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST05": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "pending",
+      "reason": "Land registry returned PENDING (async verification)"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST06": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST07": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST08": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST09": {
+    "fire_noc": {
+      "status": "mismatch",
+      "reason": "Registry: NOC number belongs to INST01 (Shri Ram Institute of Technology); QR HOLDER=INST01"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "verified",
+      "reason": "University record matches"
+    }
+  },
+  "INST10": {
+    "fire_noc": {
+      "status": "verified",
+      "reason": "Registry and QR match printed details"
+    },
+    "land_deed": {
+      "status": "verified",
+      "reason": "Registry record matches deed"
+    },
+    "affiliation_letter": {
+      "status": "source_unavailable",
+      "reason": "KVU verification service unavailable"
+    },
+    "accreditation_certificate": {
+      "status": "manual_review",
+      "reason": "Blurry scan; QR unreadable and certificate number OCR low-confidence"
+    }
+  }
+}

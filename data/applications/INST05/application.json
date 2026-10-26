@@ -1,0 +1,68 @@
+{
+  "application_id": "APP-2027-0005",
+  "academic_year": "2027-28",
+  "category": "EoA",
+  "submitted_on": "2026-10-19",
+  "institution": {
+    "id": "INST05",
+    "aicte_permanent_id": "1-SP-0001005",
+    "name": "Sitapur Nagar Polytechnic & Engineering College",
+    "trust": "Sitapur Gramin Vikas Trust",
+    "district": "Sitapur Nagar",
+    "state": "Sampurna Pradesh",
+    "university": "Sampurna Technical University"
+  },
+  "programmes": [
+    {
+      "name": "B.Tech ME",
+      "existing_intake_claimed": 60,
+      "proposed_intake": 60
+    },
+    {
+      "name": "B.Tech CE",
+      "existing_intake_claimed": 60,
+      "proposed_intake": 60
+    }
+  ],
+  "declared": {
+    "land_area_acres": 3.5,
+    "built_up_area_sqm": 9800,
+    "faculty_count": 9,
+    "total_existing_intake": 120,
+    "total_proposed_intake": 120
+  },
+  "documents": [
+    {
+      "doc_type": "fire_noc",
+      "file": "documents/fire_noc.pdf"
+    },
+    {
+      "doc_type": "land_deed",
+      "file": "documents/land_deed.pdf"
+    },
+    {
+      "doc_type": "affiliation_letter",
+      "file": "documents/affiliation_letter.pdf"
+    },
+    {
+      "doc_type": "faculty_list",
+      "file": "documents/faculty_list.pdf"
+    },
+    {
+      "doc_type": "affidavit",
+      "file": "documents/affidavit.pdf"
+    }
+  ],
+  "photos": [
+    {
+      "type": "computer_lab",
+      "file": "photos/computer_lab.jpg",
+      "claimed_computers": 20
+    },
+    {
+      "type": "classroom",
+      "file": "photos/classroom.jpg",
+      "claimed_seats": 60
+    }
+  ]
+}

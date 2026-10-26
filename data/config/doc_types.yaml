@@ -1,0 +1,79 @@
+# Document types in the dataset, how to recognise them, and which fields to extract.
+# "label" = the printed label that precedes the value on the page (use it as an anchor).
+# Dates are printed dd-mm-yyyy; store them as ISO yyyy-mm-dd.
+
+fire_noc:
+  display_name: Fire Safety NOC
+  classify_keywords: ["FIRE SAFETY NO OBJECTION CERTIFICATE"]
+  issuer: SPFES
+  verify: {registry: fire_noc_registry.json, key_field: noc_no, qr: true}
+  statutory: true            # expiry of this document is a high-risk signal
+  fields:
+    noc_no:            {label: "NOC No.:", regex: "SPFES/NOC/\\d{4}/\\d{4}"}
+    issue_date:        {label: "Date of Issue:", type: date}
+    institution_name:  {label: "Name of Occupier:"}
+    built_up_area_sqm: {label: "Built-up Area (sq. m):", type: number}
+    valid_till:        {label: "Valid Till:", type: date}
+
+land_deed:
+  display_name: Land / Sale Deed
+  classify_keywords: ["CERTIFIED EXTRACT OF REGISTERED SALE DEED"]
+  issuer: SPREG
+  verify: {registry: land_registry.json, key_field: deed_no, qr: false}
+  fields:
+    deed_no:           {label: "Registration No.:", regex: "SPREG/[A-Z]{3}/\\d{4}/\\d{5}"}
+    registration_date: {label: "Date of Registration:", type: date}
+    owner:             {label: "Purchaser / Owner:"}
+    survey_no:         {label: "Khasra / Survey No.:"}
+    land_area_acres:   {label: "Total Land Area:", regex: "([\\d.]+)\\s*acres", type: number}
+
+affiliation_letter:
+  display_name: University Affiliation Letter
+  classify_keywords: ["GRANT OF AFFILIATION"]
+  issuer: STU | KVU (prefix of letter_no)
+  verify: {registry: university_registry.json, key_field: letter_no, qr: true}
+  fields:
+    letter_no:         {label: "Letter No.:", regex: "(STU|KVU)/AFF/\\d{4}/\\d{3}"}
+    issue_date:        {label: "Date:", type: date}
+    institution_name:  {label: "Institution:"}
+    aicte_id:          {label: "AICTE Permanent ID:"}
+    session:           {label: "Session:"}
+
+accreditation_certificate:
+  display_name: Programme Accreditation Certificate
+  classify_keywords: ["CERTIFICATE OF PROGRAMME ACCREDITATION"]
+  issuer: BPAC
+  verify: {registry: accreditation_registry.json, key_field: cert_no, qr: true}
+  fields:
+    cert_no:           {label: "Certificate No.:", regex: "BPAC/ACC/\\d{4}/\\d{4}"}
+    institution_name:  {label: "Institution:"}
+    programme:         {label: "Programme:"}
+    valid_from:        {label: "Valid From:", type: date}
+    valid_till:        {label: "Valid Till:", type: date}
+
+faculty_list:
+  display_name: Faculty List
+  classify_keywords: ["LIST OF REGULAR TEACHING FACULTY"]
+  issuer: institution
+  verify: null
+  fields:
+    faculty_count:     {label: "Total Regular Faculty:", type: number}
+  rows:
+    regex: "(FAC-\\d{6})\\s+(.+?)\\s+(\\d{2}-\\d{2}-\\d{4})"   # faculty_id, name, dob
+    entity_type: faculty
+
+affidavit:
+  display_name: Affidavit cum Undertaking
+  classify_keywords: ["AFFIDAVIT CUM UNDERTAKING"]
+  issuer: institution (notarised)
+  verify: null
+  fields:
+    land_area_acres:   {label: "Land in possession:", regex: "([\\d.]+)\\s*acres", type: number}
+    built_up_area_sqm: {label: "Built-up area:", type: number}
+    proposed_intake:   {label: "Total proposed intake:", type: number}
+    faculty_count:     {label: "Regular faculty on roll:", type: number}
+    fire_noc_no:       {label: "Fire NOC reference:", regex: "SPFES/NOC/\\d{4}/\\d{4}"}
+
+photo:
+  types: [computer_lab, classroom]
+  checks: [pHash duplicate across all applications (distance <= 6 of 64 bits)]

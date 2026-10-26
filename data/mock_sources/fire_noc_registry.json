@@ -1,0 +1,83 @@
+{
+  "SPFES/NOC/2025/5476": {
+    "holder_institution_id": "INST01",
+    "holder_name": "Shri Ram Institute of Technology",
+    "address": "Main Campus, Navgarh, Navgarh District",
+    "built_up_area_sqm": 14200,
+    "issue_date": "2025-04-10",
+    "valid_till": "2028-03-31",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2025/8618": {
+    "holder_institution_id": "INST02",
+    "holder_name": "Navgarh College of Engineering",
+    "address": "Main Campus, Navgarh, Navgarh District",
+    "built_up_area_sqm": 21000,
+    "issue_date": "2025-02-18",
+    "valid_till": "2028-03-31",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2023/4622": {
+    "holder_institution_id": "INST03",
+    "holder_name": "Dhanpur Institute of Engineering & Management",
+    "address": "Main Campus, Dhanpur, Dhanpur District",
+    "built_up_area_sqm": 16800,
+    "issue_date": "2023-04-01",
+    "valid_till": "2026-03-31",
+    "status": "EXPIRED"
+  },
+  "SPFES/NOC/2023/5149": {
+    "holder_institution_id": "INST04",
+    "holder_name": "Ambikapuri Engineering College",
+    "address": "Main Campus, Ambikapuri, Ambikapuri District",
+    "built_up_area_sqm": 12500,
+    "issue_date": "2023-03-15",
+    "valid_till": "2026-03-31",
+    "status": "EXPIRED"
+  },
+  "SPFES/NOC/2025/9057": {
+    "holder_institution_id": "INST05",
+    "holder_name": "Sitapur Nagar Polytechnic & Engineering College",
+    "address": "Main Campus, Sitapur Nagar, Sitapur Nagar District",
+    "built_up_area_sqm": 9800,
+    "issue_date": "2025-06-02",
+    "valid_till": "2028-06-30",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2024/9823": {
+    "holder_institution_id": "INST06",
+    "holder_name": "Devgarh Institute of Technology",
+    "address": "Main Campus, Devgarh, Devgarh District",
+    "built_up_area_sqm": 15000,
+    "issue_date": "2024-11-20",
+    "valid_till": "2027-12-31",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2025/4916": {
+    "holder_institution_id": "INST07",
+    "holder_name": "Rajkot Kalan College of Engineering",
+    "address": "Main Campus, Rajkot Kalan, Rajkot Kalan District",
+    "built_up_area_sqm": 11800,
+    "issue_date": "2025-01-09",
+    "valid_till": "2028-01-31",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2025/1783": {
+    "holder_institution_id": "INST08",
+    "holder_name": "Ambikapuri Institute of Information Technology",
+    "address": "Main Campus, Ambikapuri, Ambikapuri District",
+    "built_up_area_sqm": 10400,
+    "issue_date": "2025-03-27",
+    "valid_till": "2028-03-31",
+    "status": "ACTIVE"
+  },
+  "SPFES/NOC/2025/3521": {
+    "holder_institution_id": "INST10",
+    "holder_name": "Kaveri Valley School of Engineering",
+    "address": "Main Campus, Dhanpur, Dhanpur District",
+    "built_up_area_sqm": 13900,
+    "issue_date": "2025-05-14",
+    "valid_till": "2028-05-31",
+    "status": "ACTIVE"
+  }
+}

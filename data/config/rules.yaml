@@ -1,0 +1,57 @@
+# Compliance rules as data (json-logic). Edit values here (or in the admin UI) - no code change.
+# NOTE: numbers are ILLUSTRATIVE for the prototype, not actual AICTE norms.
+version: "2027-28.v1"
+effective_from: "2026-09-01"
+params:
+  session_start: "2027-07-01"
+  min_land_acres: 2.5
+  faculty_student_ratio: 20       # required_faculty = ceil(total_proposed_intake / ratio)
+  min_built_up_sqm_per_seat: 40
+
+# Context available to rules:
+#   app.*      -> application.json "declared" block + category
+#   docs.<doc_type>.<field>  -> extracted values (dates as ISO strings)
+#   derived.required_faculty, derived.total_proposed_intake
+#   params.*
+rules:
+  - id: R-FIRE-001
+    title: Fire NOC valid on session start
+    applies_to: [EoA, EoA_INTAKE_INCREASE]
+    severity: critical
+    logic: {">=": [{"var": "docs.fire_noc.valid_till"}, {"var": "params.session_start"}]}
+    message: "Fire NOC valid till {docs.fire_noc.valid_till}; must be valid on {params.session_start}"
+    evidence: {doc_type: fire_noc, field: valid_till}
+
+  - id: R-LAND-001
+    title: Minimum land area
+    applies_to: [EoA, EoA_INTAKE_INCREASE]
+    severity: critical
+    logic: {">=": [{"var": "docs.land_deed.land_area_acres"}, {"var": "params.min_land_acres"}]}
+    message: "Land as per deed {docs.land_deed.land_area_acres} acres < {params.min_land_acres} acres"
+    evidence: {doc_type: land_deed, field: land_area_acres}
+
+  - id: R-FAC-001
+    title: Faculty-student ratio
+    applies_to: [EoA, EoA_INTAKE_INCREASE]
+    severity: critical
+    logic: {">=": [{"var": "docs.faculty_list.faculty_count"}, {"var": "derived.required_faculty"}]}
+    message: "Faculty {docs.faculty_list.faculty_count} < required {derived.required_faculty} for intake {derived.total_proposed_intake}"
+    evidence: {doc_type: faculty_list, field: faculty_count}
+
+  - id: R-BUA-001
+    title: Built-up area per seat
+    applies_to: [EoA, EoA_INTAKE_INCREASE]
+    severity: warning
+    logic: {">=": [{"var": "docs.fire_noc.built_up_area_sqm"},
+                   {"*": [{"var": "derived.total_proposed_intake"}, {"var": "params.min_built_up_sqm_per_seat"}]}]}
+    message: "Built-up area below {params.min_built_up_sqm_per_seat} sq. m per seat"
+    evidence: {doc_type: fire_noc, field: built_up_area_sqm}
+
+  - id: R-ACC-001
+    title: Accreditation valid for intake increase
+    applies_to: [EoA_INTAKE_INCREASE]
+    severity: critical
+    logic: {"and": [{"!!": [{"var": "docs.accreditation_certificate.valid_till"}]},
+                    {">=": [{"var": "docs.accreditation_certificate.valid_till"}, {"var": "params.session_start"}]}]}
+    message: "Valid accreditation required for programme with intake increase"
+    evidence: {doc_type: accreditation_certificate, field: valid_till}

@@ -1,0 +1,441 @@
+{
+  "INST01": {
+    "risk_band": "Low",
+    "findings": [
+      {
+        "code": "ENTITY_REUSE",
+        "severity": "info",
+        "doc_type": "fire_noc",
+        "field": "noc_no",
+        "detail": "NOC number SPFES/NOC/2025/5476 also appears in INST09 (INST01 is the genuine holder per registry)",
+        "related": [
+          "INST09"
+        ]
+      }
+    ],
+    "must_not_flag": [
+      "ENTITY_REUSE on faculty 'Rajesh Sharma' (FAC-418820) - same name as INST05's FAC-562391 but different ID and DOB"
+    ],
+    "scenario": "Clean application. Control case: everything valid and verifiable.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      },
+      "accreditation_certificate": {
+        "status": "verified",
+        "reason": "Accreditation registry matches"
+      }
+    }
+  },
+  "INST02": {
+    "risk_band": "Low",
+    "findings": [
+      {
+        "code": "DUPLICATE_IMAGE",
+        "severity": "info",
+        "doc_type": "photo:computer_lab",
+        "detail": "Lab photo reused by INST07 (INST02 appears to be the original)",
+        "related": [
+          "INST07"
+        ]
+      }
+    ],
+    "scenario": "Clean intake-increase application with valid accreditation. Control case.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      },
+      "accreditation_certificate": {
+        "status": "verified",
+        "reason": "Accreditation registry matches"
+      }
+    }
+  },
+  "INST03": {
+    "risk_band": "High",
+    "findings": [
+      {
+        "code": "EXPIRED_DOC",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "field": "valid_till",
+        "detail": "Fire NOC valid till 31-03-2026, before session start 01-07-2027",
+        "bbox": [
+          226,
+          337.2,
+          279.7,
+          348.3
+        ]
+      },
+      {
+        "code": "RULE_FAIL",
+        "severity": "critical",
+        "rule_id": "R-FIRE-001",
+        "detail": "Fire NOC not valid on session start"
+      },
+      {
+        "code": "SOURCE_EXPIRED",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "detail": "Registry status EXPIRED"
+      }
+    ],
+    "scenario": "Fire NOC genuinely EXPIRED (valid till 2026-03-31). Registry confirms expiry.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "expired",
+        "reason": "Registry status EXPIRED (valid till 2026-03-31)"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST04": {
+    "risk_band": "High",
+    "findings": [
+      {
+        "code": "TAMPER_SUSPECTED",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "field": "valid_till",
+        "method": "ELA",
+        "detail": "Edited region around 'Valid Till' value (single-compressed patch on double-compressed scan)",
+        "bbox": [
+          223.7,
+          335.0,
+          298.6,
+          349.9
+        ]
+      },
+      {
+        "code": "METADATA_ANOMALY",
+        "severity": "warning",
+        "doc_type": "fire_noc",
+        "detail": "PDF Producer 'Adobe Photoshop 25.1'; ModDate 2026-09-18 long after issue 2023-03-15"
+      },
+      {
+        "code": "QR_MISMATCH",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "field": "valid_till",
+        "detail": "QR VALID_TILL=2026-03-31 vs printed 31-03-2028"
+      },
+      {
+        "code": "SOURCE_MISMATCH",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "detail": "Registry valid_till 2026-03-31 (EXPIRED) vs printed 31-03-2028"
+      }
+    ],
+    "scenario": "Fire NOC TAMPERED: 'Valid till' edited 31-03-2026 -> 31-03-2028 on a scanned image (ELA-detectable), PDF producer = Adobe Photoshop. QR + registry still say 2026.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "mismatch",
+        "reason": "Printed Valid Till 31-03-2028; QR and registry say 2026-03-31 (expired)"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST05": {
+    "risk_band": "High",
+    "findings": [
+      {
+        "code": "CROSS_DOC_MISMATCH",
+        "severity": "critical",
+        "field": "land_area_acres",
+        "detail": "Land deed 2.00 acres vs affidavit / form 3.50 acres",
+        "evidence": [
+          {
+            "doc_type": "land_deed",
+            "bbox": [
+              226,
+              259.3,
+              275.0,
+              270.3
+            ]
+          },
+          {
+            "doc_type": "affidavit",
+            "bbox": [
+              256,
+              189.6,
+              305.0,
+              200.6
+            ]
+          }
+        ]
+      },
+      {
+        "code": "RULE_FAIL",
+        "severity": "critical",
+        "rule_id": "R-LAND-001",
+        "detail": "Deed land area 2.00 < 2.50 acres"
+      },
+      {
+        "code": "VERIFICATION_PENDING",
+        "severity": "info",
+        "doc_type": "land_deed",
+        "detail": "Land registry response PENDING"
+      }
+    ],
+    "scenario": "LAND MISMATCH: sale deed says 2.0 acres, affidavit claims 3.5 acres. 2.0 also fails the minimum-land rule. Land registry verification returns PENDING.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "pending",
+        "reason": "Land registry returned PENDING (async verification)"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST06": {
+    "risk_band": "High",
+    "findings": [
+      {
+        "code": "MISSING_DOC",
+        "severity": "critical",
+        "doc_type": "accreditation_certificate",
+        "detail": "Required for EoA_INTAKE_INCREASE (B.Tech CSE 60 -> 180)"
+      },
+      {
+        "code": "RULE_FAIL",
+        "severity": "critical",
+        "rule_id": "R-FAC-001",
+        "detail": "Faculty 8 < required 12 for total proposed intake 240 (1:20)"
+      },
+      {
+        "code": "RULE_FAIL",
+        "severity": "critical",
+        "rule_id": "R-ACC-001",
+        "detail": "No valid accreditation for programme with intake increase"
+      },
+      {
+        "code": "NO_PREVIOUS_RECORD",
+        "severity": "warning",
+        "detail": "AICTE records: previous_year is null"
+      }
+    ],
+    "scenario": "MISSING accreditation certificate for an intake increase; FACULTY SHORTAGE (8 faculty for 240 intake); no previous-year record in AICTE system.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST07": {
+    "risk_band": "Medium",
+    "findings": [
+      {
+        "code": "DUPLICATE_IMAGE",
+        "severity": "warning",
+        "doc_type": "photo:computer_lab",
+        "method": "pHash",
+        "detail": "Near-duplicate of INST02 computer_lab.jpg (cropped, resized, brightened)",
+        "related": [
+          "INST02"
+        ]
+      },
+      {
+        "code": "ENTITY_REUSE",
+        "severity": "warning",
+        "doc_type": "faculty_list",
+        "entity_type": "faculty",
+        "detail": "3 faculty (same Faculty ID + name + DOB) also on INST08 list for 2027-28",
+        "entity_ids": [
+          "FAC-495331",
+          "FAC-732400",
+          "FAC-695694"
+        ],
+        "related": [
+          "INST08"
+        ]
+      }
+    ],
+    "scenario": "DUPLICATE lab photo (INST02's photo, resized + brightened). 3 faculty members (same Faculty ID, name, DOB) also claimed by INST08 in the same academic year.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST08": {
+    "risk_band": "Medium",
+    "findings": [
+      {
+        "code": "ENTITY_REUSE",
+        "severity": "warning",
+        "doc_type": "faculty_list",
+        "entity_type": "faculty",
+        "detail": "3 faculty also claimed by INST07 for 2027-28",
+        "entity_ids": [
+          "FAC-495331",
+          "FAC-732400",
+          "FAC-695694"
+        ],
+        "related": [
+          "INST07"
+        ]
+      }
+    ],
+    "scenario": "Shares the same 3 faculty members with INST07 (entity-graph case).",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST09": {
+    "risk_band": "High",
+    "findings": [
+      {
+        "code": "SOURCE_MISMATCH",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "detail": "Registry: SPFES/NOC/2025/5476 is held by INST01, not this institution"
+      },
+      {
+        "code": "QR_MISMATCH",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "detail": "QR HOLDER=INST01"
+      },
+      {
+        "code": "ENTITY_REUSE",
+        "severity": "critical",
+        "doc_type": "fire_noc",
+        "entity_type": "fire_noc_no",
+        "detail": "Same Fire NOC number in INST01 application",
+        "related": [
+          "INST01"
+        ]
+      },
+      {
+        "code": "METADATA_ANOMALY",
+        "severity": "warning",
+        "doc_type": "fire_noc",
+        "detail": "Issuer certificate produced with 'Microsoft Word 2019' (genuine SPFES certificates use 'SPFES e-Certificate Portal')"
+      }
+    ],
+    "scenario": "REUSED Fire NOC: carries INST01's NOC number with INST09's name typed in (producer = Microsoft Word). QR + registry point to INST01 -> MISMATCH; entity graph shows the NOC number in 2 applications.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "mismatch",
+        "reason": "Registry: NOC number belongs to INST01 (Shri Ram Institute of Technology); QR HOLDER=INST01"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "verified",
+        "reason": "University record matches"
+      }
+    }
+  },
+  "INST10": {
+    "risk_band": "Medium",
+    "findings": [
+      {
+        "code": "RECORD_MISMATCH",
+        "severity": "critical",
+        "field": "total_existing_intake",
+        "detail": "Form claims existing intake 240; AICTE 2026-27 approved intake 120"
+      },
+      {
+        "code": "SOURCE_UNAVAILABLE",
+        "severity": "info",
+        "doc_type": "affiliation_letter",
+        "detail": "KVU verification API unavailable"
+      },
+      {
+        "code": "MANUAL_REVIEW",
+        "severity": "warning",
+        "doc_type": "accreditation_certificate",
+        "detail": "Unreadable QR / low-confidence OCR on blurry scan"
+      }
+    ],
+    "scenario": "RECORD MISMATCH: form claims existing intake 240, AICTE record says 120. Affiliation from KVU whose verification API is UNAVAILABLE. Accreditation certificate is a blurry scan with unreadable QR -> MANUAL REVIEW.",
+    "expected_verification": {
+      "fire_noc": {
+        "status": "verified",
+        "reason": "Registry and QR match printed details"
+      },
+      "land_deed": {
+        "status": "verified",
+        "reason": "Registry record matches deed"
+      },
+      "affiliation_letter": {
+        "status": "source_unavailable",
+        "reason": "KVU verification service unavailable"
+      },
+      "accreditation_certificate": {
+        "status": "manual_review",
+        "reason": "Blurry scan; QR unreadable and certificate number OCR low-confidence"
+      }
+    }
+  }
+}

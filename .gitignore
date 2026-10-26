@@ -1,0 +1,19 @@
+﻿# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Backend runtime data
+backend/storage/
+backend/*_brief.pdf
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

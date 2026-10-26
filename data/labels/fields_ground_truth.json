@@ -1,0 +1,4097 @@
+{
+  "INST01": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/5476",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-04-10",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Shri Ram Institute of Technology",
+          "bbox": [
+            226,
+            237.5,
+            378.3,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 14200,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/NAV/2007/32289",
+          "bbox": [
+            226,
+            139.6,
+            345.6,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2007-09-19",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Shri Ram Shiksha Samiti",
+          "bbox": [
+            226,
+            179.5,
+            342.1,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 720/7",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 6.2,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/929",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-18",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Shri Ram Institute of Technology",
+          "bbox": [
+            226,
+            179.5,
+            378.3,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001001",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "accreditation_certificate": {
+      "file": "documents/accreditation_certificate.pdf",
+      "scanned": false,
+      "fields": {
+        "cert_no": {
+          "value": "BPAC/ACC/2024/4198",
+          "bbox": [
+            226,
+            139.6,
+            332.2,
+            150.6
+          ]
+        },
+        "programme": {
+          "value": "B.Tech CSE",
+          "bbox": [
+            226,
+            179.5,
+            283.8,
+            190.5
+          ]
+        },
+        "valid_from": {
+          "value": "2024-07-01",
+          "bbox": [
+            226,
+            199.4,
+            279.7,
+            210.5
+          ]
+        },
+        "valid_till": {
+          "value": "2029-06-30",
+          "bbox": [
+            226,
+            219.4,
+            279.7,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-418820",
+          "name": "Rajesh Sharma",
+          "dob": "1979-04-12",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2014-07-01",
+          "bbox": [
+            49,
+            201.1,
+            468.4,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-593309",
+          "name": "Rahul Menon",
+          "dob": "1984-07-13",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Associate Professor",
+          "department": "CSE",
+          "joining": "2024-05-01",
+          "bbox": [
+            49,
+            216.6,
+            507.6,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-128621",
+          "name": "Sneha Rao",
+          "dob": "1984-07-28",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2012-02-01",
+          "bbox": [
+            49,
+            232.1,
+            505.2,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-615876",
+          "name": "Gaurav Gupta",
+          "dob": "1973-08-05",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2022-04-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-379670",
+          "name": "Nitin Mishra",
+          "dob": "1968-07-12",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2019-07-01",
+          "bbox": [
+            49,
+            263.1,
+            505.2,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-269507",
+          "name": "Neha Bose",
+          "dob": "1985-10-12",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Associate Professor",
+          "department": "Applied Sciences",
+          "joining": "2023-04-01",
+          "bbox": [
+            49,
+            278.6,
+            507.6,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-972414",
+          "name": "Gaurav Verma",
+          "dob": "1980-07-04",
+          "qualification": "M.Tech (IT)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2015-11-01",
+          "bbox": [
+            49,
+            294.1,
+            468.4,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-387218",
+          "name": "Anjali Reddy",
+          "dob": "1986-07-19",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2022-09-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-221986",
+          "name": "Deepa Verma",
+          "dob": "1990-05-01",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2017-12-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-634065",
+          "name": "Priya Deshmukh",
+          "dob": "1983-09-12",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Professor",
+          "department": "IT",
+          "joining": "2025-07-01",
+          "bbox": [
+            49,
+            340.6,
+            468.4,
+            349.5
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 6.2,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 14200,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/5476",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST02": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/8618",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-02-18",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Navgarh College of Engineering",
+          "bbox": [
+            226,
+            237.5,
+            374.8,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 21000,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/NAV/2007/92600",
+          "bbox": [
+            226,
+            139.6,
+            345.6,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2007-03-14",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Navgarh Vidya Trust",
+          "bbox": [
+            226,
+            179.5,
+            321.7,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 196/8",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 8.0,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/590",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-15",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Navgarh College of Engineering",
+          "bbox": [
+            226,
+            179.5,
+            374.8,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001002",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "accreditation_certificate": {
+      "file": "documents/accreditation_certificate.pdf",
+      "scanned": false,
+      "fields": {
+        "cert_no": {
+          "value": "BPAC/ACC/2025/8926",
+          "bbox": [
+            226,
+            139.6,
+            332.2,
+            150.6
+          ]
+        },
+        "programme": {
+          "value": "B.Tech CSE",
+          "bbox": [
+            226,
+            179.5,
+            283.8,
+            190.5
+          ]
+        },
+        "valid_from": {
+          "value": "2025-07-01",
+          "bbox": [
+            226,
+            199.4,
+            279.7,
+            210.5
+          ]
+        },
+        "valid_till": {
+          "value": "2028-06-30",
+          "bbox": [
+            226,
+            219.4,
+            279.7,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 13,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-519797",
+          "name": "Ajay Joshi",
+          "dob": "1967-07-01",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2012-08-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-113579",
+          "name": "Aarav Nair",
+          "dob": "1981-06-24",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2020-03-01",
+          "bbox": [
+            49,
+            216.6,
+            505.2,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-755423",
+          "name": "Sunita Das",
+          "dob": "1985-05-25",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2016-06-01",
+          "bbox": [
+            49,
+            232.1,
+            468.4,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-778250",
+          "name": "Divya Tiwari",
+          "dob": "1992-09-14",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2016-02-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-488095",
+          "name": "Meena Das",
+          "dob": "1989-03-28",
+          "qualification": "M.E. (Civil)",
+          "designation": "Professor",
+          "department": "Applied Sciences",
+          "joining": "2018-02-01",
+          "bbox": [
+            49,
+            263.1,
+            468.4,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-570667",
+          "name": "Shweta Das",
+          "dob": "1980-01-05",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2016-05-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-952467",
+          "name": "Shweta Gupta",
+          "dob": "1986-05-19",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Associate Professor",
+          "department": "Applied Sciences",
+          "joining": "2025-07-01",
+          "bbox": [
+            49,
+            294.1,
+            507.6,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-440886",
+          "name": "Kavita Bose",
+          "dob": "1994-11-02",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2024-02-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-638582",
+          "name": "Rahul Tiwari",
+          "dob": "1967-01-09",
+          "qualification": "M.E. (Civil)",
+          "designation": "Associate Professor",
+          "department": "CSE",
+          "joining": "2013-08-01",
+          "bbox": [
+            49,
+            325.1,
+            507.6,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-486025",
+          "name": "Kiran Singh",
+          "dob": "1994-02-28",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2025-06-01",
+          "bbox": [
+            49,
+            340.6,
+            505.2,
+            349.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-216970",
+          "name": "Amit Chauhan",
+          "dob": "1993-03-08",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2020-05-01",
+          "bbox": [
+            49,
+            356.1,
+            505.2,
+            365.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-993996",
+          "name": "Geeta Reddy",
+          "dob": "1966-04-07",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2013-10-01",
+          "bbox": [
+            49,
+            371.6,
+            505.2,
+            380.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-901503",
+          "name": "Asha Yadav",
+          "dob": "1967-07-17",
+          "qualification": "M.Tech (IT)",
+          "designation": "Professor",
+          "department": "CE",
+          "joining": "2024-12-01",
+          "bbox": [
+            49,
+            387.1,
+            468.4,
+            396.0
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 8.0,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 21000,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 180,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 13,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/8618",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST03": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2023/4622",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2023-04-01",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Dhanpur Institute of Engineering & Management",
+          "bbox": [
+            226,
+            237.5,
+            450.7,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 16800,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2026-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/DHA/2007/84284",
+          "bbox": [
+            226,
+            139.6,
+            346.2,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2007-04-05",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Dhanpur Education Society",
+          "bbox": [
+            226,
+            179.5,
+            353.2,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 840/6",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 5.5,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/586",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-18",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Dhanpur Institute of Engineering & Management",
+          "bbox": [
+            226,
+            179.5,
+            450.7,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001003",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 13,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-389574",
+          "name": "Sunita Nair",
+          "dob": "1971-09-24",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2024-04-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-134947",
+          "name": "Ajay Sharma",
+          "dob": "1965-08-04",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Professor",
+          "department": "IT",
+          "joining": "2020-02-01",
+          "bbox": [
+            49,
+            216.6,
+            468.4,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-739041",
+          "name": "Vivek Deshmukh",
+          "dob": "1972-11-18",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2016-10-01",
+          "bbox": [
+            49,
+            232.1,
+            505.2,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-993222",
+          "name": "Kiran Pandey",
+          "dob": "1971-04-15",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Associate Professor",
+          "department": "ECE",
+          "joining": "2019-07-01",
+          "bbox": [
+            49,
+            247.6,
+            507.6,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-597634",
+          "name": "Gaurav Tiwari",
+          "dob": "1982-03-06",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2022-01-01",
+          "bbox": [
+            49,
+            263.1,
+            468.4,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-180869",
+          "name": "Pankaj Reddy",
+          "dob": "1972-02-22",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Associate Professor",
+          "department": "CE",
+          "joining": "2012-01-01",
+          "bbox": [
+            49,
+            278.6,
+            507.6,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-571552",
+          "name": "Sneha Gupta",
+          "dob": "1965-03-04",
+          "qualification": "M.E. (Civil)",
+          "designation": "Associate Professor",
+          "department": "ME",
+          "joining": "2015-03-01",
+          "bbox": [
+            49,
+            294.1,
+            507.6,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-745912",
+          "name": "Usha Chauhan",
+          "dob": "1990-11-05",
+          "qualification": "M.Tech (IT)",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2015-12-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-517140",
+          "name": "Aarav Chauhan",
+          "dob": "1979-01-06",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2014-03-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-581777",
+          "name": "Pooja Gupta",
+          "dob": "1972-06-23",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2025-02-01",
+          "bbox": [
+            49,
+            340.6,
+            505.2,
+            349.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-695469",
+          "name": "Sunita Menon",
+          "dob": "1987-02-10",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2015-04-01",
+          "bbox": [
+            49,
+            356.1,
+            505.2,
+            365.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-915205",
+          "name": "Sneha Deshmukh",
+          "dob": "1992-02-12",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2019-07-01",
+          "bbox": [
+            49,
+            371.6,
+            505.2,
+            380.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-911808",
+          "name": "Shweta Mishra",
+          "dob": "1989-10-16",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Professor",
+          "department": "Applied Sciences",
+          "joining": "2020-08-01",
+          "bbox": [
+            49,
+            387.1,
+            468.4,
+            396.0
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 5.5,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 16800,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 180,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 13,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2023/4622",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST04": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": true,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2023/5149",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2023-03-15",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Ambikapuri Engineering College",
+          "bbox": [
+            226,
+            237.5,
+            376.0,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 12500,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ],
+      "tampered_region": [
+        223.7,
+        335.0,
+        298.6,
+        349.9
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/AMB/2011/76005",
+          "bbox": [
+            226,
+            139.6,
+            346.8,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2011-04-06",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Ambika Shiksha Prasar Mandal",
+          "bbox": [
+            226,
+            179.5,
+            372.5,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 638/8",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 4.8,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/373",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-09",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Ambikapuri Engineering College",
+          "bbox": [
+            226,
+            179.5,
+            376.0,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001004",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            226,
+            157.5,
+            231.8,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-437253",
+          "name": "Ajay Menon",
+          "dob": "1968-10-16",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2017-12-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-205361",
+          "name": "Neha Joshi",
+          "dob": "1991-12-10",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Associate Professor",
+          "department": "CSE",
+          "joining": "2013-12-01",
+          "bbox": [
+            49,
+            216.6,
+            507.6,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-117497",
+          "name": "Gaurav Reddy",
+          "dob": "1972-01-27",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Professor",
+          "department": "CE",
+          "joining": "2016-08-01",
+          "bbox": [
+            49,
+            232.1,
+            468.4,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-981484",
+          "name": "Meena Nair",
+          "dob": "1981-02-10",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2020-04-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-545623",
+          "name": "Kiran Menon",
+          "dob": "1991-06-19",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2014-11-01",
+          "bbox": [
+            49,
+            263.1,
+            505.2,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-696822",
+          "name": "Pankaj Nair",
+          "dob": "1980-07-09",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2020-04-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-269916",
+          "name": "Suresh Singh",
+          "dob": "1989-08-13",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Associate Professor",
+          "department": "Applied Sciences",
+          "joining": "2023-01-01",
+          "bbox": [
+            49,
+            294.1,
+            507.6,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-197940",
+          "name": "Geeta Das",
+          "dob": "1974-11-27",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2012-04-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-587733",
+          "name": "Arun Bose",
+          "dob": "1976-12-22",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Professor",
+          "department": "ME",
+          "joining": "2020-02-01",
+          "bbox": [
+            49,
+            325.1,
+            468.4,
+            334.0
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 4.8,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 12500,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            256,
+            249.4,
+            261.8,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2023/5149",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST05": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/9057",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-06-02",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Sitapur Nagar Polytechnic & Engineering College",
+          "bbox": [
+            226,
+            237.5,
+            454.8,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 9800,
+          "bbox": [
+            226,
+            297.3,
+            252.3,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-06-30",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/SIT/2010/85694",
+          "bbox": [
+            226,
+            139.6,
+            340.4,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2010-12-02",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Sitapur Gramin Vikas Trust",
+          "bbox": [
+            226,
+            179.5,
+            352.0,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 437/1",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 2.0,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/244",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-04",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Sitapur Nagar Polytechnic & Engineering College",
+          "bbox": [
+            226,
+            179.5,
+            454.8,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001005",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            226,
+            157.5,
+            231.8,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-562391",
+          "name": "Rajesh Sharma",
+          "dob": "1988-11-03",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2019-08-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-199149",
+          "name": "Swati Das",
+          "dob": "1973-12-26",
+          "qualification": "M.E. (Civil)",
+          "designation": "Professor",
+          "department": "ME",
+          "joining": "2019-02-01",
+          "bbox": [
+            49,
+            216.6,
+            468.4,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-649336",
+          "name": "Bhavna Rao",
+          "dob": "1972-12-13",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2014-09-01",
+          "bbox": [
+            49,
+            232.1,
+            505.2,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-328986",
+          "name": "Shweta Verma",
+          "dob": "1975-05-22",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2017-04-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-630514",
+          "name": "Bhavna Reddy",
+          "dob": "1972-05-08",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2023-08-01",
+          "bbox": [
+            49,
+            263.1,
+            505.2,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-428247",
+          "name": "Mahesh Reddy",
+          "dob": "1992-06-24",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2025-06-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-798744",
+          "name": "Deepa Tiwari",
+          "dob": "1972-08-05",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2019-02-01",
+          "bbox": [
+            49,
+            294.1,
+            505.2,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-559798",
+          "name": "Arun Gupta",
+          "dob": "1990-11-18",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2014-01-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-296530",
+          "name": "Rekha Kulkarni",
+          "dob": "1991-01-25",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2024-02-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 3.5,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 9800,
+          "bbox": [
+            256,
+            209.5,
+            310.9,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            256,
+            249.4,
+            261.8,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/9057",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST06": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2024/9823",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2024-11-20",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Devgarh Institute of Technology",
+          "bbox": [
+            226,
+            237.5,
+            374.2,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 15000,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2027-12-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/DEV/2010/99431",
+          "bbox": [
+            226,
+            139.6,
+            345.6,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2010-05-03",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Devgarh Takniki Shiksha Samiti",
+          "bbox": [
+            226,
+            179.5,
+            374.2,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 637/4",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 5.0,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/557",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-21",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Devgarh Institute of Technology",
+          "bbox": [
+            226,
+            179.5,
+            374.2,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001006",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 8,
+          "bbox": [
+            226,
+            157.5,
+            231.8,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-847800",
+          "name": "Shweta Pandey",
+          "dob": "1981-06-17",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Associate Professor",
+          "department": "CSE",
+          "joining": "2015-11-01",
+          "bbox": [
+            49,
+            201.1,
+            507.6,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-683749",
+          "name": "Rohit Nair",
+          "dob": "1977-04-18",
+          "qualification": "Ph.D. (Mech)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2013-01-01",
+          "bbox": [
+            49,
+            216.6,
+            468.4,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-713033",
+          "name": "Pooja Pandey",
+          "dob": "1985-05-24",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Associate Professor",
+          "department": "Applied Sciences",
+          "joining": "2023-06-01",
+          "bbox": [
+            49,
+            232.1,
+            507.6,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-481234",
+          "name": "Rohit Joshi",
+          "dob": "1990-01-02",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2019-04-01",
+          "bbox": [
+            49,
+            247.6,
+            468.4,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-465531",
+          "name": "Sanjay Kulkarni",
+          "dob": "1986-12-08",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2016-01-01",
+          "bbox": [
+            49,
+            263.1,
+            505.2,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-131448",
+          "name": "Mahesh Singh",
+          "dob": "1993-07-02",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2025-03-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-716178",
+          "name": "Vivek Bose",
+          "dob": "1983-09-05",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Professor",
+          "department": "IT",
+          "joining": "2025-10-01",
+          "bbox": [
+            49,
+            294.1,
+            468.4,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-342724",
+          "name": "Deepa Kulkarni",
+          "dob": "1973-05-03",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2012-04-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 5.0,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 15000,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 240,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 8,
+          "bbox": [
+            256,
+            249.4,
+            261.8,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2024/9823",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST07": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/4916",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-01-09",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Rajkot Kalan College of Engineering",
+          "bbox": [
+            226,
+            237.5,
+            394.7,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 11800,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-01-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/RAJ/2006/14965",
+          "bbox": [
+            226,
+            139.6,
+            343.9,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2006-09-09",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Kalan Shiksha Nyas",
+          "bbox": [
+            226,
+            179.5,
+            320.0,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 344/4",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 4.0,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/512",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-08",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Rajkot Kalan College of Engineering",
+          "bbox": [
+            226,
+            179.5,
+            394.7,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001007",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-495331",
+          "name": "Amit Nair",
+          "dob": "1985-05-20",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2019-10-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-732400",
+          "name": "Bhavna Deshmukh",
+          "dob": "1976-05-20",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2017-01-01",
+          "bbox": [
+            49,
+            216.6,
+            505.2,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-695694",
+          "name": "Anjali Menon",
+          "dob": "1974-02-17",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2017-10-01",
+          "bbox": [
+            49,
+            232.1,
+            505.2,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-926293",
+          "name": "Suresh Sharma",
+          "dob": "1994-03-25",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Associate Professor",
+          "department": "IT",
+          "joining": "2012-12-01",
+          "bbox": [
+            49,
+            247.6,
+            507.6,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-105834",
+          "name": "Sanjay Iyer",
+          "dob": "1978-07-06",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2018-10-01",
+          "bbox": [
+            49,
+            263.1,
+            505.2,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-967228",
+          "name": "Rajesh Nair",
+          "dob": "1980-02-20",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2014-03-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-671199",
+          "name": "Amit Kulkarni",
+          "dob": "1968-06-16",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2012-11-01",
+          "bbox": [
+            49,
+            294.1,
+            505.2,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-959885",
+          "name": "Kiran Joshi",
+          "dob": "1986-07-25",
+          "qualification": "M.Tech (IT)",
+          "designation": "Professor",
+          "department": "ME",
+          "joining": "2024-01-01",
+          "bbox": [
+            49,
+            309.6,
+            468.4,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-162538",
+          "name": "Neha Sharma",
+          "dob": "1994-03-15",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2022-04-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-894106",
+          "name": "Asha Deshmukh",
+          "dob": "1965-05-20",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Associate Professor",
+          "department": "ME",
+          "joining": "2020-12-01",
+          "bbox": [
+            49,
+            340.6,
+            507.6,
+            349.5
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 4.0,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 11800,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/4916",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST08": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/1783",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-03-27",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Ambikapuri Institute of Information Technology",
+          "bbox": [
+            226,
+            237.5,
+            442.5,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 10400,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/AMB/2016/40061",
+          "bbox": [
+            226,
+            139.6,
+            346.8,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2016-09-19",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Shree Vidya Bharati Trust",
+          "bbox": [
+            226,
+            179.5,
+            346.2,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 517/3",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 3.6,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/796",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-04",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Ambikapuri Institute of Information Technology",
+          "bbox": [
+            226,
+            179.5,
+            442.5,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001008",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-495331",
+          "name": "Amit Nair",
+          "dob": "1985-05-20",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2019-10-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-732400",
+          "name": "Bhavna Deshmukh",
+          "dob": "1976-05-20",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2017-01-01",
+          "bbox": [
+            49,
+            216.6,
+            505.2,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-695694",
+          "name": "Anjali Menon",
+          "dob": "1974-02-17",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2017-10-01",
+          "bbox": [
+            49,
+            232.1,
+            505.2,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-923733",
+          "name": "Nisha Patel",
+          "dob": "1990-11-17",
+          "qualification": "M.Tech (IT)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2025-04-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-796261",
+          "name": "Sanjay Chauhan",
+          "dob": "1976-03-21",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Professor",
+          "department": "CSE",
+          "joining": "2023-07-01",
+          "bbox": [
+            49,
+            263.1,
+            468.4,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-576600",
+          "name": "Lata Gupta",
+          "dob": "1965-09-11",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2017-11-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-963925",
+          "name": "Mahesh Bose",
+          "dob": "1968-01-01",
+          "qualification": "M.Tech (IT)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2018-06-01",
+          "bbox": [
+            49,
+            294.1,
+            505.2,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-236025",
+          "name": "Vikram Das",
+          "dob": "1968-05-19",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Associate Professor",
+          "department": "CE",
+          "joining": "2022-06-01",
+          "bbox": [
+            49,
+            309.6,
+            507.6,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-731889",
+          "name": "Ajay Chauhan",
+          "dob": "1970-07-21",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2020-11-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-813745",
+          "name": "Alok Gupta",
+          "dob": "1979-10-06",
+          "qualification": "M.E. (Civil)",
+          "designation": "Professor",
+          "department": "CE",
+          "joining": "2025-01-01",
+          "bbox": [
+            49,
+            340.6,
+            468.4,
+            349.5
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 3.6,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 10400,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 10,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/1783",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST09": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/5476",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-04-10",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Navgarh Women's Engineering College",
+          "bbox": [
+            226,
+            237.5,
+            409.5,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 12000,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-03-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/NAV/2009/16363",
+          "bbox": [
+            226,
+            139.6,
+            345.6,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2009-03-24",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Matrushakti Shiksha Trust",
+          "bbox": [
+            226,
+            179.5,
+            347.4,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 543/3",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 4.5,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "STU/AFF/2027/771",
+          "bbox": [
+            226,
+            139.6,
+            316.5,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-13",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Navgarh Women's Engineering College",
+          "bbox": [
+            226,
+            179.5,
+            409.5,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001009",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            226,
+            157.5,
+            231.8,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-411218",
+          "name": "Usha Chauhan",
+          "dob": "1987-06-09",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Professor",
+          "department": "ME",
+          "joining": "2024-04-01",
+          "bbox": [
+            49,
+            201.1,
+            468.4,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-760667",
+          "name": "Usha Deshmukh",
+          "dob": "1987-02-24",
+          "qualification": "M.Tech (ECE)",
+          "designation": "Assistant Professor",
+          "department": "IT",
+          "joining": "2018-08-01",
+          "bbox": [
+            49,
+            216.6,
+            505.2,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-454946",
+          "name": "Swati Singh",
+          "dob": "1989-02-02",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Professor",
+          "department": "ME",
+          "joining": "2018-08-01",
+          "bbox": [
+            49,
+            232.1,
+            468.4,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-653806",
+          "name": "Pooja Singh",
+          "dob": "1981-09-09",
+          "qualification": "M.Tech (IT)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2025-01-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-765690",
+          "name": "Aarav Mishra",
+          "dob": "1983-04-05",
+          "qualification": "M.E. (Civil)",
+          "designation": "Professor",
+          "department": "CE",
+          "joining": "2014-01-01",
+          "bbox": [
+            49,
+            263.1,
+            468.4,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-501791",
+          "name": "Lata Reddy",
+          "dob": "1971-07-01",
+          "qualification": "M.Tech (IT)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2023-12-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-817502",
+          "name": "Manoj Gupta",
+          "dob": "1992-10-10",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2013-11-01",
+          "bbox": [
+            49,
+            294.1,
+            505.2,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-856717",
+          "name": "Vivek Verma",
+          "dob": "1965-10-21",
+          "qualification": "Ph.D. (CSE)",
+          "designation": "Associate Professor",
+          "department": "CSE",
+          "joining": "2017-02-01",
+          "bbox": [
+            49,
+            309.6,
+            507.6,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-898169",
+          "name": "Shweta Sharma",
+          "dob": "1990-06-19",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "CSE",
+          "joining": "2025-06-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 4.5,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 12000,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 120,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 9,
+          "bbox": [
+            256,
+            249.4,
+            261.8,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/5476",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  },
+  "INST10": {
+    "fire_noc": {
+      "file": "documents/fire_noc.pdf",
+      "scanned": false,
+      "fields": {
+        "noc_no": {
+          "value": "SPFES/NOC/2025/3521",
+          "bbox": [
+            226,
+            139.6,
+            339.2,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2025-05-14",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Kaveri Valley School of Engineering",
+          "bbox": [
+            226,
+            237.5,
+            392.9,
+            248.5
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 13900,
+          "bbox": [
+            226,
+            297.3,
+            258.1,
+            308.4
+          ]
+        },
+        "valid_till": {
+          "value": "2028-05-31",
+          "bbox": [
+            226,
+            337.2,
+            279.7,
+            348.3
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "land_deed": {
+      "file": "documents/land_deed.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "deed_no": {
+          "value": "SPREG/DHA/2013/32079",
+          "bbox": [
+            226,
+            139.6,
+            346.2,
+            150.6
+          ]
+        },
+        "registration_date": {
+          "value": "2013-07-25",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "owner": {
+          "value": "Kaveri Valley Education Foundation",
+          "bbox": [
+            226,
+            179.5,
+            392.3,
+            190.5
+          ]
+        },
+        "survey_no": {
+          "value": "Khasra No. 474/9",
+          "bbox": [
+            226,
+            199.4,
+            307.7,
+            210.5
+          ]
+        },
+        "land_area_acres": {
+          "value": 5.2,
+          "bbox": [
+            226,
+            259.3,
+            275.0,
+            270.3
+          ]
+        }
+      }
+    },
+    "affiliation_letter": {
+      "file": "documents/affiliation_letter.pdf",
+      "scanned": false,
+      "fields": {
+        "letter_no": {
+          "value": "KVU/AFF/2027/940",
+          "bbox": [
+            226,
+            139.6,
+            317.0,
+            150.6
+          ]
+        },
+        "issue_date": {
+          "value": "2026-09-22",
+          "bbox": [
+            226,
+            159.5,
+            279.7,
+            170.6
+          ]
+        },
+        "institution_name": {
+          "value": "Kaveri Valley School of Engineering",
+          "bbox": [
+            226,
+            179.5,
+            392.9,
+            190.5
+          ]
+        },
+        "aicte_id": {
+          "value": "1-SP-0001010",
+          "bbox": [
+            226,
+            199.4,
+            293.7,
+            210.5
+          ]
+        },
+        "session": {
+          "value": "2027-28",
+          "bbox": [
+            226,
+            219.4,
+            264.5,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        590.0,
+        539.3,
+        700.0
+      ]
+    },
+    "accreditation_certificate": {
+      "file": "documents/accreditation_certificate.pdf",
+      "scanned": true,
+      "fields": {
+        "cert_no": {
+          "value": "BPAC/ACC/2025/4050",
+          "bbox": [
+            226,
+            139.6,
+            332.2,
+            150.6
+          ]
+        },
+        "programme": {
+          "value": "B.Tech CSE",
+          "bbox": [
+            226,
+            179.5,
+            283.8,
+            190.5
+          ]
+        },
+        "valid_from": {
+          "value": "2025-01-01",
+          "bbox": [
+            226,
+            199.4,
+            279.7,
+            210.5
+          ]
+        },
+        "valid_till": {
+          "value": "2028-12-31",
+          "bbox": [
+            226,
+            219.4,
+            279.7,
+            230.4
+          ]
+        }
+      },
+      "qr_bbox": [
+        429.3,
+        580.0,
+        539.3,
+        690.0
+      ]
+    },
+    "faculty_list": {
+      "file": "documents/faculty_list.pdf",
+      "scanned": false,
+      "fields": {
+        "faculty_count": {
+          "value": 14,
+          "bbox": [
+            226,
+            157.5,
+            237.7,
+            168.6
+          ]
+        }
+      },
+      "rows": [
+        {
+          "faculty_id": "FAC-731963",
+          "name": "Sunita Reddy",
+          "dob": "1990-12-05",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "ME",
+          "joining": "2018-05-01",
+          "bbox": [
+            49,
+            201.1,
+            505.2,
+            210.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-850276",
+          "name": "Amit Reddy",
+          "dob": "1966-04-15",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Associate Professor",
+          "department": "ME",
+          "joining": "2023-08-01",
+          "bbox": [
+            49,
+            216.6,
+            507.6,
+            225.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-906185",
+          "name": "Meena Reddy",
+          "dob": "1978-05-09",
+          "qualification": "Ph.D. (Physics)",
+          "designation": "Associate Professor",
+          "department": "ME",
+          "joining": "2023-04-01",
+          "bbox": [
+            49,
+            232.1,
+            507.6,
+            241.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-466646",
+          "name": "Bhavna Chauhan",
+          "dob": "1981-04-10",
+          "qualification": "M.Sc. (Maths), Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2022-12-01",
+          "bbox": [
+            49,
+            247.6,
+            505.2,
+            256.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-306449",
+          "name": "Nitin Yadav",
+          "dob": "1987-05-01",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Associate Professor",
+          "department": "ECE",
+          "joining": "2018-01-01",
+          "bbox": [
+            49,
+            263.1,
+            507.6,
+            272.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-563339",
+          "name": "Vikram Joshi",
+          "dob": "1966-11-15",
+          "qualification": "M.Tech (CSE)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2022-03-01",
+          "bbox": [
+            49,
+            278.6,
+            505.2,
+            287.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-322865",
+          "name": "Swati Joshi",
+          "dob": "1965-06-16",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2012-09-01",
+          "bbox": [
+            49,
+            294.1,
+            505.2,
+            303.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-239419",
+          "name": "Pooja Verma",
+          "dob": "1970-10-17",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2018-12-01",
+          "bbox": [
+            49,
+            309.6,
+            505.2,
+            318.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-971506",
+          "name": "Ramesh Tiwari",
+          "dob": "1990-11-24",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "Applied Sciences",
+          "joining": "2023-02-01",
+          "bbox": [
+            49,
+            325.1,
+            505.2,
+            334.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-987893",
+          "name": "Aarav Deshmukh",
+          "dob": "1988-08-03",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2012-07-01",
+          "bbox": [
+            49,
+            340.6,
+            505.2,
+            349.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-472832",
+          "name": "Divya Joshi",
+          "dob": "1970-10-13",
+          "qualification": "M.E. (Civil)",
+          "designation": "Assistant Professor",
+          "department": "ECE",
+          "joining": "2025-09-01",
+          "bbox": [
+            49,
+            356.1,
+            505.2,
+            365.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-745089",
+          "name": "Vivek Kulkarni",
+          "dob": "1994-03-28",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Professor",
+          "department": "Applied Sciences",
+          "joining": "2024-12-01",
+          "bbox": [
+            49,
+            371.6,
+            468.4,
+            380.5
+          ]
+        },
+        {
+          "faculty_id": "FAC-209283",
+          "name": "Neha Das",
+          "dob": "1973-01-09",
+          "qualification": "MCA, Ph.D.",
+          "designation": "Associate Professor",
+          "department": "CE",
+          "joining": "2013-10-01",
+          "bbox": [
+            49,
+            387.1,
+            507.6,
+            396.0
+          ]
+        },
+        {
+          "faculty_id": "FAC-813607",
+          "name": "Anjali Chauhan",
+          "dob": "1990-06-08",
+          "qualification": "M.Tech (Mech)",
+          "designation": "Assistant Professor",
+          "department": "CE",
+          "joining": "2020-02-01",
+          "bbox": [
+            49,
+            402.6,
+            505.2,
+            411.5
+          ]
+        }
+      ]
+    },
+    "affidavit": {
+      "file": "documents/affidavit.pdf",
+      "scanned": true,
+      "bbox_note": "approximate (scan rotation <= 0.9 deg)",
+      "fields": {
+        "land_area_acres": {
+          "value": 5.2,
+          "bbox": [
+            256,
+            189.6,
+            305.0,
+            200.6
+          ]
+        },
+        "built_up_area_sqm": {
+          "value": 13900,
+          "bbox": [
+            256,
+            209.5,
+            316.7,
+            220.6
+          ]
+        },
+        "proposed_intake": {
+          "value": 240,
+          "bbox": [
+            256,
+            229.5,
+            273.5,
+            240.5
+          ]
+        },
+        "faculty_count": {
+          "value": 14,
+          "bbox": [
+            256,
+            249.4,
+            267.7,
+            260.5
+          ]
+        },
+        "fire_noc_no": {
+          "value": "SPFES/NOC/2025/3521",
+          "bbox": [
+            256,
+            269.4,
+            369.2,
+            280.4
+          ]
+        }
+      }
+    }
+  }
+}
