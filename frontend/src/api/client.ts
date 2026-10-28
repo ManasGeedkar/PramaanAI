@@ -39,15 +39,15 @@ export const api = {
     return fetchJson<ApplicationQueueItem[]>(`/api/applications?sort=${encodeURIComponent(sort)}`);
   },
 
-  getApplication: async (id: number): Promise<ApplicationDetail> => {
+  getApplication: async (id: number | string): Promise<ApplicationDetail> => {
     return fetchJson<ApplicationDetail>(`/api/applications/${id}`);
   },
 
-  runApplicationPipeline: async (id: number): Promise<any> => {
+  runApplicationPipeline: async (id: number | string): Promise<any> => {
     return fetchJson<any>(`/api/applications/${id}/run`, { method: 'POST' });
   },
 
-  getBriefPdfUrl: (id: number): string => {
+  getBriefPdfUrl: (id: number | string): string => {
     return `/api/applications/${id}/brief.pdf`;
   },
 

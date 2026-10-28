@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import type {
   ApplicationDetail as ApplicationDetailType,
@@ -29,8 +30,8 @@ import { EntityGraph } from '../components/EntityGraph';
 import { formatDate, formatDateTime } from '../utils/date';
 
 interface ApplicationDetailProps {
-  applicationId: number;
-  onBack: () => void;
+  applicationId?: number | string;
+  onBack?: () => void;
 }
 
 // Friendly document type labels
@@ -73,6 +74,12 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   applicationId,
   onBack,
 }) => {
+  const params = useParams<{ id: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const currentAppId = applicationId ?? params.id;
+
   const [app, setApp] = useState<ApplicationDetailType | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -101,8 +108,20 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   const [reviewingId, setReviewingId] = useState<number | null>(null);
   const [reviewSuccessMsg, setReviewSuccessMsg] = useState<string | null>(null);
 
-  // Page tab: scrutiny vs entity graph
-  const [pageTab, setPageTab] = useState<'scrutiny' | 'entity_graph'>('scrutiny');
+  // Page tab: scrutiny vs entity graph (survives refresh via ?tab=graph)
+  const [pageTab, setPageTab] = useState<'scrutiny' | 'entity_graph'>(() => {
+    return searchParams.get('tab') === 'graph' ? 'entity_graph' : 'scrutiny';
+  });
+
+  // Sync pageTab if searchParams change
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam === 'graph' && pageTab !== 'entity_graph') {
+      setPageTab('entity_graph');
+    } else if (!tabParam && pageTab !== 'scrutiny') {
+      setPageTab('scrutiny');
+    }
+  }, [searchParams]);
 
   // Bottom section active tab
   const [bottomTab, setBottomTab] = useState<'verifications' | 'checklist' | 'fields'>('verifications');
@@ -132,10 +151,11 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   };
 
   const fetchDetail = async () => {
+    if (!currentAppId) return;
     try {
       setLoading(true);
       setError(null);
-      const data = await api.getApplication(applicationId);
+      const data = await api.getApplication(currentAppId);
       setApp(data);
 
       // Default active document
@@ -143,8 +163,18 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
         setActiveDocId(data.documents[0].id);
       }
 
-      // Default selected finding if any critical finding exists
-      if (data.findings && data.findings.length > 0) {
+      // Check if finding is specified in URL search params (by code or id)
+      const findingQuery = searchParams.get('finding');
+      let targetFinding = null;
+      if (findingQuery && data.findings && data.findings.length > 0) {
+        targetFinding = data.findings.find(
+          (f) => f.code === findingQuery || String(f.id) === findingQuery
+        );
+      }
+
+      if (targetFinding) {
+        setSelectedFindingId(targetFinding.id);
+      } else if (data.findings && data.findings.length > 0) {
         const firstCrit = data.findings.find((f) => f.severity === 'critical') || data.findings[0];
         setSelectedFindingId(firstCrit.id);
       }
@@ -157,7 +187,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
 
   useEffect(() => {
     fetchDetail();
-  }, [applicationId]);
+  }, [currentAppId]);
 
   // When selected finding changes, update active document(s) & highlight boxes
   useEffect(() => {
@@ -214,9 +244,10 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   }, [selectedFindingId, app]);
 
   const handleReRun = async () => {
+    if (!currentAppId) return;
     try {
       setReRunning(true);
-      await api.runApplicationPipeline(applicationId);
+      await api.runApplicationPipeline(currentAppId);
       await fetchDetail();
       setReviewSuccessMsg('Scrutiny pipeline re-run completed successfully.');
       setTimeout(() => setReviewSuccessMsg(null), 4000);
@@ -225,6 +256,32 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
     } finally {
       setReRunning(false);
     }
+  };
+
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+    } else {
+      navigate('/queue');
+    }
+  };
+
+  const handleTabSwitch = (newTab: 'scrutiny' | 'entity_graph') => {
+    setPageTab(newTab);
+    const nextParams = new URLSearchParams(searchParams);
+    if (newTab === 'entity_graph') {
+      nextParams.set('tab', 'graph');
+    } else {
+      nextParams.delete('tab');
+    }
+    setSearchParams(nextParams, { replace: true });
+  };
+
+  const handleFindingSelect = (finding: any) => {
+    setSelectedFindingId(finding.id);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set('finding', finding.code || String(finding.id));
+    setSearchParams(nextParams, { replace: true });
   };
 
   const handleReviewAction = async (
@@ -414,10 +471,10 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   if (error || !app) {
     return (
       <div className="p-8 bg-red-50 text-red-700 border border-red-200 rounded-xl text-center text-sm">
-        <p className="font-semibold mb-2">Error loading application #{applicationId}</p>
+        <p className="font-semibold mb-2">Error loading application #{currentAppId}</p>
         <p>{error}</p>
         <button
-          onClick={onBack}
+          onClick={handleBack}
           className="mt-4 px-4 py-1.5 bg-white border border-red-300 text-red-800 rounded-lg text-xs font-semibold hover:bg-red-100"
         >
           Return to Triage Queue
@@ -458,7 +515,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex items-start gap-3">
             <button
-              onClick={onBack}
+              onClick={handleBack}
               className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors mt-0.5"
               title="Back to queue"
             >
@@ -547,7 +604,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
       {/* Primary Navigation Tabs */}
       <div className="flex items-center gap-2 bg-white p-1.5 rounded-lg border border-slate-200 w-fit">
         <button
-          onClick={() => setPageTab('scrutiny')}
+          onClick={() => handleTabSwitch('scrutiny')}
           className={`flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs font-bold transition-all ${
             pageTab === 'scrutiny'
               ? 'bg-blue-900 text-white shadow-xs'
@@ -558,7 +615,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
           <span>Document Scrutiny</span>
         </button>
         <button
-          onClick={() => setPageTab('entity_graph')}
+          onClick={() => handleTabSwitch('entity_graph')}
           className={`flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs font-bold transition-all ${
             pageTab === 'entity_graph'
               ? 'bg-blue-900 text-white shadow-xs'
@@ -659,7 +716,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
                   return (
                     <div
                       key={finding.id}
-                      onClick={() => setSelectedFindingId(finding.id)}
+                      onClick={() => handleFindingSelect(finding)}
                       className={`p-3.5 rounded-lg border transition-all cursor-pointer bg-white text-left ${sevConfig.border} ${
                         isSelected ? 'bg-slate-50/70 shadow-xs' : 'hover:bg-slate-50/40'
                       }`}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import {
   Inbox,
@@ -11,57 +12,66 @@ import {
   Shield,
   Layers,
   FileUp,
+  LogOut,
 } from 'lucide-react';
 
 export type UserRole = 'Scrutiny Officer' | 'Institution' | 'Admin';
 
 interface SidebarProps {
-  currentTab: string;
-  onTabChange: (tab: string) => void;
+  currentTab?: string;
+  onTabChange?: (tab: string) => void;
   role: UserRole;
   onRoleChange: (role: UserRole) => void;
+  onSignOut?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  currentTab,
-  onTabChange,
   role,
   onRoleChange,
+  onSignOut,
 }) => {
+  const location = useLocation();
+
   const navItems = [
     {
       id: 'queue',
+      path: '/queue',
       label: 'Triage Queue',
       icon: Inbox,
       roles: ['Scrutiny Officer', 'Admin'],
       badge: 'Live',
     },
     {
-      id: 'upload',
+      id: 'new',
+      path: '/new',
       label: 'New Application',
       icon: FileUp,
       roles: ['Institution', 'Admin', 'Scrutiny Officer'],
     },
     {
       id: 'overview',
+      path: '/overview',
       label: 'Management Overview',
       icon: BarChart3,
       roles: ['Scrutiny Officer', 'Admin', 'Institution'],
     },
     {
-      id: 'evaluate',
+      id: 'evaluation',
+      path: '/evaluation',
       label: 'Benchmark Evaluation',
       icon: FileCheck2,
       roles: ['Scrutiny Officer', 'Admin'],
     },
     {
       id: 'audit',
+      path: '/audit',
       label: 'Audit Log & Chain',
       icon: History,
       roles: ['Scrutiny Officer', 'Admin'],
     },
     {
       id: 'rules',
+      path: '/admin/rules',
       label: 'Rules Engine (Admin)',
       icon: Sliders,
       roles: ['Admin'],
@@ -130,11 +140,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
         {visibleNavItems.map((item) => {
           const Icon = item.icon;
-          const isActive = currentTab === item.id;
+          const isActive =
+            location.pathname === item.path ||
+            (item.path === '/queue' && location.pathname.startsWith('/applications'));
+
           return (
-            <button
+            <Link
               key={item.id}
-              onClick={() => onTabChange(item.id)}
+              to={item.path}
               className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all ${
                 isActive
                   ? 'bg-blue-800 text-white shadow-sm shadow-blue-950 font-semibold'
@@ -150,10 +163,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   {item.badge}
                 </span>
               )}
-            </button>
+            </Link>
           );
         })}
       </nav>
+
+      {/* Sign Out Item */}
+      <div className="p-3 border-t border-slate-800 bg-slate-900/60">
+        <button
+          onClick={onSignOut}
+          title="Sign out of console"
+          className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:bg-slate-800 hover:text-white transition-all cursor-pointer group"
+        >
+          <LogOut className="w-4 h-4 text-slate-400 group-hover:text-rose-400 transition-colors" />
+          <span>Sign Out</span>
+        </button>
+      </div>
 
       {/* System Status Pill */}
       <div className="p-3 border-t border-slate-800 bg-slate-950/70 text-[11px] text-slate-400 flex items-center justify-between">

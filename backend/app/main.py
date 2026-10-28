@@ -1,5 +1,5 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import Session
 
@@ -77,14 +77,48 @@ app.include_router(audit_router)
 app.include_router(quality_router)
 
 
-@app.get("/")
-def root():
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+
+if FRONTEND_DIST.exists():
+    assets_dir = FRONTEND_DIST / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
+
+
+RESERVED_SPA_PREFIXES = ("api/", "mock/", "docs", "redoc", "openapi.json", "health")
+
+
+@app.get("/{full_path:path}")
+def serve_spa(full_path: str):
+    clean_path = full_path.lstrip("/")
+
+    # If the requested path starts with api/, mock/, docs, redoc, openapi.json or health,
+    # return a JSON 404 rather than the SPA index.html
+    for prefix in RESERVED_SPA_PREFIXES:
+        base = prefix.rstrip("/")
+        if clean_path == base or clean_path.startswith(f"{base}/"):
+            raise HTTPException(status_code=404, detail="Not Found")
+
+    if FRONTEND_DIST.exists():
+        if clean_path:
+            requested_file = FRONTEND_DIST / clean_path
+            if requested_file.is_file():
+                return FileResponse(requested_file)
+        index_html = FRONTEND_DIST / "index.html"
+        if index_html.is_file():
+            return FileResponse(index_html)
+
     return {
         "service": "PramaanAI Backend",
         "status": "online",
         "docs_url": "/docs"
     }
-
-@app.get("/health")
-def health():
-    return {"status": "healthy"}

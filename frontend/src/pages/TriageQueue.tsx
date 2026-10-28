@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import type { ApplicationQueueItem } from '../api/types';
 import {
@@ -13,10 +14,11 @@ import {
 import { formatDate } from '../utils/date';
 
 interface TriageQueueProps {
-  onSelectApplication: (id: number) => void;
+  onSelectApplication?: (id: number | string) => void;
 }
 
 export const TriageQueue: React.FC<TriageQueueProps> = ({ onSelectApplication }) => {
+  const navigate = useNavigate();
   const [applications, setApplications] = useState<ApplicationQueueItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -241,7 +243,11 @@ export const TriageQueue: React.FC<TriageQueueProps> = ({ onSelectApplication })
                 {filteredApps.map((app, index) => (
                   <tr
                     key={app.id}
-                    onClick={() => onSelectApplication(app.id)}
+                    onClick={() => {
+                      const targetId = app.institution_id || app.id;
+                      if (onSelectApplication) onSelectApplication(targetId);
+                      navigate(`/applications/${targetId}`);
+                    }}
                     className="hover:bg-blue-50/40 cursor-pointer transition-colors group"
                   >
                     {/* Institution & App details */}

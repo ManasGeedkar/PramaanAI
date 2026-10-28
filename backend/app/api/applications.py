@@ -65,14 +65,27 @@ def list_applications(
 
     return results
 
-@router.get("/{id}")
-def get_application(
-    id: int,
-    session: Session = Depends(get_session)
-):
-    app = session.get(Application, id)
+def _resolve_application(app_id: str, session: Session) -> Application:
+    app = None
+    if str(app_id).isdigit():
+        app = session.get(Application, int(app_id))
+    if not app:
+        app = session.exec(select(Application).where(
+            (Application.institution_id == str(app_id)) |
+            (Application.application_no == str(app_id)) |
+            (Application.folder == str(app_id))
+        )).first()
     if not app:
         raise HTTPException(status_code=404, detail="Application not found")
+    return app
+
+
+@router.get("/{id}")
+def get_application(
+    id: str,
+    session: Session = Depends(get_session)
+):
+    app = _resolve_application(id, session)
 
     docs = session.exec(select(Document).where(Document.application_id == app.id)).all()
     doc_ids = [d.id for d in docs]
@@ -141,13 +154,11 @@ def get_application(
 
 @router.post("/{id}/run")
 def run_application_pipeline(
-    id: int,
+    id: str,
     sync: bool = Query(default=False),
     session: Session = Depends(get_session)
 ):
-    app = session.get(Application, id)
-    if not app:
-        raise HTTPException(status_code=404, detail="Application not found")
+    app = _resolve_application(id, session)
 
     from app.pipeline.run import run_pipeline
     result = run_pipeline(app.id, session)
@@ -155,12 +166,10 @@ def run_application_pipeline(
 
 @router.get("/{id}/brief.pdf")
 def get_application_inspection_brief(
-    id: int,
+    id: str,
     session: Session = Depends(get_session)
 ):
-    app = session.get(Application, id)
-    if not app:
-        raise HTTPException(status_code=404, detail="Application not found")
+    app = _resolve_application(id, session)
 
     from app.services.brief import generate_inspection_brief
     from fastapi.responses import Response

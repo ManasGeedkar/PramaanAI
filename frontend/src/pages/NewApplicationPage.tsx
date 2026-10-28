@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import {
   Upload,
@@ -43,10 +44,11 @@ const INITIAL_DOC_SLOTS: DocSlot[] = [
 ];
 
 interface NewApplicationPageProps {
-  onOpenApplication: (id: number) => void;
+  onOpenApplication?: (id: number | string) => void;
 }
 
 export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenApplication }) => {
+  const navigate = useNavigate();
   const [samples, setSamples] = useState<any[]>([]);
   const [selectedSample, setSelectedSample] = useState<string>('');
   const [isSampleMode, setIsSampleMode] = useState<boolean>(false);
@@ -403,8 +405,14 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
               </div>
 
               <button
-                onClick={() => onOpenApplication(pipelineApp.id)}
-                className="flex items-center gap-1.5 px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-lg shadow-sm"
+                onClick={() => {
+                  if (onOpenApplication) {
+                    onOpenApplication(pipelineApp.id);
+                  } else {
+                    navigate(`/applications/${pipelineApp.institution_id || pipelineApp.id}`);
+                  }
+                }}
+                className="flex items-center gap-1.5 px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-lg shadow-sm cursor-pointer"
               >
                 <span>Open in Scrutiny Viewer</span>
                 <ArrowRight className="w-4 h-4" />
