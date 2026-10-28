@@ -231,44 +231,28 @@ def upload_sample(
     ).first()
 
     if existing_app:
-        app_obj = existing_app
-        # Clear existing relations
-        docs = session.exec(select(Document).where(Document.application_id == app_obj.id)).all()
-        doc_ids = [d.id for d in docs]
-        if doc_ids:
-            for f in session.exec(select(Finding).where(Finding.application_id == app_obj.id)).all():
-                session.delete(f)
-            for ef in session.exec(select(ExtractedField).where(ExtractedField.document_id.in_(doc_ids))).all():
-                session.delete(ef)
-            for v in session.exec(select(Verification).where(Verification.document_id.in_(doc_ids))).all():
-                session.delete(v)
-            for d in docs:
-                session.delete(d)
-        app_obj.status = "processing"
-        app_obj.risk_score = 0.0
-        app_obj.risk_band = None
-        app_obj.risk_breakdown_json = None
-        session.add(app_obj)
-        session.commit()
-        session.refresh(app_obj)
-    else:
-        app_obj = Application(
-            application_no=app_data.get("application_id", f"APP-{folder_path.name}"),
-            institution_id=institution_info.get("id", folder_path.name),
-            institution_name=institution_info.get("name", "Unknown Institution"),
-            aicte_id=institution_info.get("aicte_permanent_id", ""),
-            category=app_data.get("category", "EoA"),
-            academic_year=app_data.get("academic_year", "2027-28"),
-            submitted_on=app_data.get("submitted_on", ""),
-            status="processing",
-            risk_score=0.0,
-            risk_band=None,
-            risk_breakdown_json=None,
-            folder=folder_path.name
+        raise HTTPException(
+            status_code=409,
+            detail=f"{folder_name} already exists — run reset_demo.py with DEMO_LIVE_UPLOAD=1"
         )
-        session.add(app_obj)
-        session.commit()
-        session.refresh(app_obj)
+
+    app_obj = Application(
+        application_no=app_data.get("application_id", f"APP-{folder_path.name}"),
+        institution_id=institution_info.get("id", folder_path.name),
+        institution_name=institution_info.get("name", "Unknown Institution"),
+        aicte_id=institution_info.get("aicte_permanent_id", ""),
+        category=app_data.get("category", "EoA"),
+        academic_year=app_data.get("academic_year", "2027-28"),
+        submitted_on=app_data.get("submitted_on", ""),
+        status="processing",
+        risk_score=0.0,
+        risk_band=None,
+        risk_breakdown_json=None,
+        folder=folder_path.name
+    )
+    session.add(app_obj)
+    session.commit()
+    session.refresh(app_obj)
 
     # Re-insert documents
     documents_list = app_data.get("documents", [])

@@ -2,10 +2,14 @@ import os
 import sys
 from pathlib import Path
 
-# Ensure backend root is in sys.path
-backend_root = Path(__file__).resolve().parent.parent
-if str(backend_root) not in sys.path:
-    sys.path.insert(0, str(backend_root))
+SCRIPT_DIR = Path(__file__).resolve().parent
+if (SCRIPT_DIR.parent / "app").exists():
+    BACKEND_DIR = SCRIPT_DIR.parent
+else:
+    BACKEND_DIR = SCRIPT_DIR.parent / "backend"
+
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
 
 import time
 from sqlmodel import Session, select

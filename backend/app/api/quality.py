@@ -198,17 +198,41 @@ def list_available_samples():
                 photos_list = [p.name for p in photo_dir.glob("*.*")] if photo_dir.exists() else []
 
                 inst = data.get("institution", {})
+                raw_docs = data.get("documents", [])
+                raw_photos = data.get("photos", [])
+
+                combined_docs = []
+                for d in raw_docs:
+                    f_name = d.get("file", "").split("/")[-1] if "/" in d.get("file", "") else d.get("file", "")
+                    combined_docs.append({
+                        "doc_type": d.get("doc_type"),
+                        "file": f_name,
+                        "path": d.get("file", "")
+                    })
+                for p in raw_photos:
+                    f_name = p.get("file", "").split("/")[-1] if "/" in p.get("file", "") else p.get("file", "")
+                    combined_docs.append({
+                        "doc_type": f"photo:{p.get('type')}",
+                        "file": f_name,
+                        "path": p.get("file", "")
+                    })
+
+                declared = data.get("declared", data.get("declared_values", {}))
+
                 samples.append({
                     "folder": folder_path.name,
                     "institution_name": inst.get("name", folder_path.name),
                     "institution_id": inst.get("id", folder_path.name),
-                    "aicte_id": inst.get("aicte_id", "N/A"),
+                    "aicte_id": inst.get("aicte_permanent_id") or inst.get("aicte_id", "N/A"),
                     "category": data.get("category", "EoA"),
                     "academic_year": data.get("academic_year", "2027-28"),
                     "documents_count": len(docs_list) + len(photos_list),
                     "programmes": data.get("programmes", []),
-                    "declared_values": data.get("declared_values", {}),
+                    "declared": declared,
+                    "declared_values": declared,
                     "institution": inst,
+                    "documents": combined_docs,
+                    "photos": raw_photos,
                     "documents_available": docs_list,
                     "photos_available": photos_list,
                 })

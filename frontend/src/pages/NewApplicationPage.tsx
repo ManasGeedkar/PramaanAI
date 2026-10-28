@@ -71,71 +71,138 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
 
   // Submission & Pipeline progress state
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [showProgress, setShowProgress] = useState<boolean>(false);
+  const [pipelineFinished, setPipelineFinished] = useState<boolean>(false);
   const [createdAppId, setCreatedAppId] = useState<number | null>(null);
   const [pipelineApp, setPipelineApp] = useState<any | null>(null);
   const [pollingActive, setPollingActive] = useState<boolean>(false);
   const [pipelineStage, setPipelineStage] = useState<number>(1);
 
+  // Inline error banners
+  const [loadSampleError, setLoadSampleError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   // Fetch samples on load
   useEffect(() => {
     api.getSamples().then((list) => {
-      setSamples(list);
-    }).catch(console.error);
+      setSamples(Array.isArray(list) ? list : []);
+    }).catch((err) => {
+      console.error(err);
+      setLoadSampleError('Failed to load synthetic samples. Please verify backend service.');
+    });
   }, []);
 
   // When a sample is selected from the dropdown
   const handleSelectSample = (folder: string) => {
+    setLoadSampleError(null);
+    setSubmitError(null);
     setSelectedSample(folder);
     if (!folder) {
       setIsSampleMode(false);
+      setDocSlots(INITIAL_DOC_SLOTS);
       return;
     }
 
-    const sample = samples.find((s) => s.folder === folder);
-    if (!sample) return;
+    if (!Array.isArray(samples)) {
+      setLoadSampleError('Sample applications not loaded yet.');
+      return;
+    }
 
-    setIsSampleMode(true);
-    setInstitutionName(sample.institution_name);
-    setAicteId(sample.aicte_id);
-    setCategory(sample.category || 'EoA');
+    const sample = samples.find((s) => s && s.folder === folder);
+    if (!sample) {
+      setLoadSampleError(`Sample application "${folder}" not found.`);
+      return;
+    }
 
-    const decl = sample.declared || {};
-    if (decl.land_acres !== undefined) setDeclaredLandAcres(String(decl.land_acres));
-    if (decl.built_up_area_sqm !== undefined) setDeclaredBuiltUpSqm(String(decl.built_up_area_sqm));
-    if (decl.faculty_count !== undefined) setDeclaredFacultyCount(String(decl.faculty_count));
+    try {
+      setIsSampleMode(true);
+      setInstitutionName(sample.institution_name || sample.institution?.name || '');
+      setAicteId(sample.aicte_id || sample.institution?.aicte_permanent_id || sample.institution?.aicte_id || '');
+      setCategory(sample.category || 'EoA');
+      if (sample.academic_year) {
+        setAcademicYear(sample.academic_year);
+      }
 
-    // Update slots with sample filenames and mock quality
-    const updated = docSlots.map((slot) => {
-      const match = sample.documents.find(
-        (d: any) => d.doc_type === slot.docType || d.doc_type.replace('photo:', '') === slot.docType.replace('photo:', '')
-      );
-      if (match) {
-        // INST10 accreditation certificate is blurred scan test case
-        const isInst10Blur = folder === 'INST10' && slot.docType === 'accreditation_certificate';
+      // Format programmes (array of objects or strings)
+      if (Array.isArray(sample.programmes) && sample.programmes.length > 0) {
+        const progStr = sample.programmes
+          .map((p: any) => (typeof p === 'string' ? p : p?.name))
+          .filter(Boolean)
+          .join(', ');
+        setProgrammes(progStr || 'Engineering & Technology');
+      } else if (typeof sample.programmes === 'string') {
+        setProgrammes(sample.programmes);
+      }
+
+      // Declared operational values
+      const decl = sample.declared || sample.declared_values || {};
+      if (decl.land_area_acres !== undefined) {
+        setDeclaredLandAcres(String(decl.land_area_acres));
+      } else if (decl.land_acres !== undefined) {
+        setDeclaredLandAcres(String(decl.land_acres));
+      }
+
+      if (decl.built_up_area_sqm !== undefined) {
+        setDeclaredBuiltUpSqm(String(decl.built_up_area_sqm));
+      } else if (decl.built_up_sqm !== undefined) {
+        setDeclaredBuiltUpSqm(String(decl.built_up_sqm));
+      }
+
+      if (decl.faculty_count !== undefined) {
+        setDeclaredFacultyCount(String(decl.faculty_count));
+      }
+
+      // Update slots with sample filenames and mock quality
+      const sampleDocs: any[] = Array.isArray(sample.documents) ? sample.documents : [];
+      const samplePhotos: any[] = Array.isArray(sample.photos) ? sample.photos : [];
+
+      const updated = (docSlots || INITIAL_DOC_SLOTS).map((slot) => {
+        if (!slot) return slot;
+        const slotType = slot.docType || '';
+        const match = sampleDocs.find((d: any) => {
+          if (!d || !d.doc_type) return false;
+          return d.doc_type === slotType ||
+            d.doc_type.replace('photo:', '') === slotType.replace('photo:', '');
+        }) || samplePhotos.find((p: any) => {
+          if (!p || !p.type) return false;
+          return `photo:${p.type}` === slotType || p.type === slotType.replace('photo:', '');
+        });
+
+        if (match) {
+          const fileName = match.file || match.filename || (typeof match === 'string' ? match : '');
+          const isInst10Blur = folder === 'INST10' && slotType === 'accreditation_certificate';
+          return {
+            ...slot,
+            sampleFileName: fileName,
+            qualityReport: isInst10Blur
+              ? {
+                  is_clear: false,
+                  blur_variance: 5.37,
+                  effective_dpi: 72,
+                  reason: 'Blurry or degraded scan detected (Laplacian variance 5.37 < 100). Low OCR readability.',
+                  warning: 'Document does not meet standard AICTE 150+ DPI clarity requirement.',
+                }
+              : {
+                  is_clear: true,
+                  blur_variance: 285.4,
+                  effective_dpi: 300,
+                  reason: null,
+                  warning: null,
+                },
+          };
+        }
         return {
           ...slot,
-          sampleFileName: match.file,
-          qualityReport: isInst10Blur
-            ? {
-                is_clear: false,
-                blur_variance: 5.37,
-                effective_dpi: 72,
-                reason: 'Blurry or degraded scan detected (Laplacian variance 5.37 < 100). Low OCR readability.',
-                warning: 'Document does not meet standard AICTE 150+ DPI clarity requirement.',
-              }
-            : {
-                is_clear: true,
-                blur_variance: 285.4,
-                effective_dpi: 300,
-                reason: null,
-                warning: null,
-              },
+          sampleFileName: undefined,
+          qualityReport: undefined,
         };
-      }
-      return slot;
-    });
+      });
 
-    setDocSlots(updated);
+      setDocSlots(updated);
+    } catch (err: any) {
+      console.error('Error in handleSelectSample:', err);
+      setLoadSampleError(`Failed to load sample details: ${err?.message || 'Unknown error'}`);
+    }
   };
 
   // Immediate Quality Check on file selection
@@ -195,7 +262,7 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
   };
 
   // Check if any file failed the quality check
-  const hasQualityFailure = docSlots.some((s) => s.qualityReport && !s.qualityReport.is_clear);
+  const hasQualityFailure = (docSlots || []).some((s) => s.qualityReport && !s.qualityReport.is_clear);
   const canSubmit = !hasQualityFailure || qualityOverrideConfirmed;
 
   // Poll for pipeline progress every 1s
@@ -208,9 +275,17 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
           setPipelineApp(app);
           setPipelineStage((prev) => (prev < 5 ? prev + 1 : 5));
 
-          if (app.status === 'validated' || (app.status as string) === 'completed' || (app.status as string) === 'error') {
+          if (
+            app.status === 'validated' ||
+            app.status === 'under_review' ||
+            app.status === 'escalated' ||
+            (app.status as string) === 'completed' ||
+            (app.status as string) === 'error'
+          ) {
             setPollingActive(false);
             setIsSubmitting(false);
+            setPipelineStage(5);
+            setPipelineFinished(true);
           }
         } catch {
           // ignore transient poll failure
@@ -227,8 +302,11 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
     e.preventDefault();
     if (!canSubmit) return;
 
+    setSubmitError(null);
     try {
       setIsSubmitting(true);
+      setShowProgress(true);
+      setPipelineFinished(false);
       setPipelineStage(1);
 
       if (isSampleMode && selectedSample) {
@@ -247,7 +325,7 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
         fd.append('declared_built_up_area_sqm', declaredBuiltUpSqm);
         fd.append('declared_faculty_count', declaredFacultyCount);
 
-        docSlots.forEach((slot) => {
+        (docSlots || []).forEach((slot) => {
           if (slot.file) {
             fd.append('files', slot.file);
             fd.append('doc_types', slot.docType);
@@ -259,8 +337,10 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
         setPollingActive(true);
       }
     } catch (err: any) {
-      alert(`Submission failed: ${err.message}`);
+      const msg = err.message ? err.message.replace(/^API Error \(\d+\):\s*/, '') : 'Submission failed';
+      setSubmitError(msg);
       setIsSubmitting(false);
+      setShowProgress(false);
     }
   };
 
@@ -325,25 +405,58 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
             </button>
           </div>
         )}
+
+        {/* Inline Sample Load Error */}
+        {loadSampleError && (
+          <div className="mt-3 p-3 bg-red-50 border border-red-300 rounded-lg text-xs text-red-900 flex items-center gap-2">
+            <ShieldAlert className="w-4 h-4 text-red-600 flex-shrink-0" />
+            <span>{loadSampleError}</span>
+          </div>
+        )}
+
+        {/* Inline Submission Error (e.g. 409 duplicate upload) */}
+        {submitError && (
+          <div className="mt-3 p-3.5 bg-red-50 border-2 border-red-400 rounded-lg text-xs text-red-900 flex items-start gap-2.5">
+            <ShieldAlert className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+            <div className="space-y-0.5">
+              <div className="font-bold text-red-950">Submission Failed</div>
+              <div className="font-mono text-[11px] text-red-800">{submitError}</div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Progress / Live Pipeline Screen */}
-      {isSubmitting && (
+      {(showProgress || isSubmitting || pipelineApp) && (
         <div className="bg-white p-6 rounded-xl border-2 border-blue-600 shadow-xl space-y-4 animate-in fade-in">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div className="flex items-center gap-2">
-              <RefreshCw className="w-5 h-5 text-blue-900 animate-spin" />
+              {pipelineFinished ? (
+                <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+              ) : (
+                <RefreshCw className="w-5 h-5 text-blue-900 animate-spin" />
+              )}
               <h2 className="text-base font-bold text-slate-900">
-                PramaanAI Live Scrutiny Pipeline Running
+                {pipelineFinished
+                  ? 'PramaanAI Automated Scrutiny Pipeline Completed'
+                  : 'PramaanAI Live Scrutiny Pipeline Running'}
               </h2>
             </div>
-            <span className="text-xs font-mono font-bold text-blue-900 bg-blue-100 px-2.5 py-1 rounded-full">
-              Polling every 1s
+            <span
+              className={`text-xs font-mono font-bold px-2.5 py-1 rounded-full ${
+                pipelineFinished
+                  ? 'text-emerald-900 bg-emerald-100'
+                  : 'text-blue-900 bg-blue-100'
+              }`}
+            >
+              {pipelineFinished ? 'Scrutiny Complete' : 'Polling every 1s'}
             </span>
           </div>
 
           <p className="text-xs text-slate-600">
-            Automated scrutiny pipeline is extracting data layers, computing forensic signatures, and evaluating AICTE compliance rules:
+            {pipelineFinished
+              ? 'Multi-stage AICTE scrutiny pipeline has executed all validation layers, forensic analyses, and rule evaluations:'
+              : 'Automated scrutiny pipeline is extracting data layers, computing forensic signatures, and evaluating AICTE compliance rules:'}
           </p>
 
           {/* Stepper Progress */}
@@ -354,32 +467,36 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
               { step: 3, title: 'Forensics', desc: 'ELA tamper & photo pHash' },
               { step: 4, title: 'Registry Checks', desc: 'Mock sources & QR' },
               { step: 5, title: 'Triage Scoring', desc: 'Rules & risk breakdown' },
-            ].map((st) => (
-              <div
-                key={st.step}
-                className={`p-3 rounded-lg border text-left transition-all ${
-                  pipelineStage >= st.step
-                    ? 'bg-blue-50 border-blue-400 text-blue-950 ring-1 ring-blue-300'
-                    : 'bg-slate-50 border-slate-200 text-slate-400'
-                }`}
-              >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="font-bold text-[11px]">Step {st.step}</span>
-                  {pipelineStage > st.step ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : pipelineStage === st.step ? (
-                    <RefreshCw className="w-3.5 h-3.5 text-blue-600 animate-spin" />
-                  ) : null}
+            ].map((st) => {
+              const isDone = pipelineFinished || pipelineStage > st.step;
+              const isCurrent = !pipelineFinished && pipelineStage === st.step;
+              return (
+                <div
+                  key={st.step}
+                  className={`p-3 rounded-lg border text-left transition-all ${
+                    isDone || isCurrent
+                      ? 'bg-blue-50 border-blue-400 text-blue-950 ring-1 ring-blue-300'
+                      : 'bg-slate-50 border-slate-200 text-slate-400'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-bold text-[11px]">Step {st.step}</span>
+                    {isDone ? (
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    ) : isCurrent ? (
+                      <RefreshCw className="w-3.5 h-3.5 text-blue-600 animate-spin" />
+                    ) : null}
+                  </div>
+                  <div className="font-bold text-xs">{st.title}</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">{st.desc}</div>
                 </div>
-                <div className="font-bold text-xs">{st.title}</div>
-                <div className="text-[10px] text-slate-500 mt-0.5">{st.desc}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Results Ready Banner */}
-          {pipelineApp && pipelineApp.status === 'validated' && (
-            <div className="mt-4 p-4 bg-emerald-50 border border-emerald-300 rounded-lg flex items-center justify-between">
+          {pipelineApp && (pipelineFinished || pipelineApp.status === 'validated') && (
+            <div className="mt-4 p-4 bg-emerald-50 border border-emerald-300 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-emerald-600" />
@@ -405,6 +522,7 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
               </div>
 
               <button
+                type="button"
                 onClick={() => {
                   if (onOpenApplication) {
                     onOpenApplication(pipelineApp.id);
@@ -412,9 +530,9 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({ onOpenAp
                     navigate(`/applications/${pipelineApp.institution_id || pipelineApp.id}`);
                   }
                 }}
-                className="flex items-center gap-1.5 px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-lg shadow-sm cursor-pointer"
+                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-lg shadow-sm cursor-pointer whitespace-nowrap transition-colors"
               >
-                <span>Open in Scrutiny Viewer</span>
+                <span>Scrutiny complete — Open result</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

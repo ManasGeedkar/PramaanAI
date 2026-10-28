@@ -19,6 +19,8 @@ STORAGE_DIR.mkdir(parents=True, exist_ok=True)
 (STORAGE_DIR / "ela").mkdir(parents=True, exist_ok=True)
 (STORAGE_DIR / "briefs").mkdir(parents=True, exist_ok=True)
 (STORAGE_DIR / "uploads").mkdir(parents=True, exist_ok=True)
+(STORAGE_DIR / "ocr_cache").mkdir(parents=True, exist_ok=True)
+(STORAGE_DIR / "cache").mkdir(parents=True, exist_ok=True)
 
 DB_PATH = STORAGE_DIR / "app.db"
 DATABASE_URL = f"sqlite:///{DB_PATH}"

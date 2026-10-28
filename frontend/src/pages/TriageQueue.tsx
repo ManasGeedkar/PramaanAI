@@ -31,7 +31,7 @@ export const TriageQueue: React.FC<TriageQueueProps> = ({ onSelectApplication })
       setLoading(true);
       setError(null);
       const data = await api.getApplications('risk');
-      setApplications(data);
+      setApplications(Array.isArray(data) ? data : []);
     } catch (err: any) {
       setError(err.message || 'Failed to load application queue');
     } finally {
@@ -56,7 +56,7 @@ export const TriageQueue: React.FC<TriageQueueProps> = ({ onSelectApplication })
     }
   };
 
-  const filteredApps = applications.filter((app) => {
+  const filteredApps = (applications || []).filter((app) => {
     const instName = app.institution_name || app.institution || '';
     const instId = app.institution_id || '';
     const appNo = app.application_no || app.no || '';

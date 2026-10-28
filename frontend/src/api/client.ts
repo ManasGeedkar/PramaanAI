@@ -151,10 +151,15 @@ export const api = {
     Array<{
       folder: string;
       institution_name: string;
+      institution_id?: string;
       aicte_id: string;
       category: string;
-      documents: Array<{ doc_type: string; file: string }>;
-      declared: Record<string, any>;
+      academic_year?: string;
+      programmes?: any[];
+      declared?: Record<string, any>;
+      declared_values?: Record<string, any>;
+      documents?: Array<{ doc_type: string; file: string; path?: string }>;
+      photos?: Array<{ type: string; file: string }>;
     }>
   > => {
     return fetchJson('/api/samples');

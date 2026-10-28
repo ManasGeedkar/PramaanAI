@@ -23,9 +23,15 @@ if hasattr(sys.stdout, "reconfigure"):
 
 # Add backend directory to sys.path
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parent
-BACKEND_DIR = REPO_ROOT / "backend"
-sys.path.insert(0, str(BACKEND_DIR))
+if (SCRIPT_DIR.parent / "app").exists():
+    BACKEND_DIR = SCRIPT_DIR.parent
+    REPO_ROOT = BACKEND_DIR.parent
+else:
+    REPO_ROOT = SCRIPT_DIR.parent
+    BACKEND_DIR = REPO_ROOT / "backend"
+
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
 
 from sqlmodel import Session, select, text
 from app.db import engine, init_db
@@ -59,6 +65,10 @@ def reset_storage():
         shutil.rmtree(ela_dir, ignore_errors=True)
     ela_dir.mkdir(parents=True, exist_ok=True)
 
+    # Ensure ocr_cache and cache directories exist and remain intact
+    (STORAGE_DIR / "ocr_cache").mkdir(parents=True, exist_ok=True)
+    (STORAGE_DIR / "cache").mkdir(parents=True, exist_ok=True)
+
     # Clean stray PNGs in storage root
     for p in STORAGE_DIR.glob("*.png"):
         try:
@@ -66,7 +76,7 @@ def reset_storage():
         except Exception:
             pass
 
-    print("[OK] Storage cleaned (preserved storage/ocr_cache and storage/cache)")
+    print("[OK] Storage cleaned (kept storage/ocr_cache and storage/cache)")
 
 
 def reset_database():
@@ -113,12 +123,18 @@ def reset_database():
 
 def reseed_and_run():
     demo_live_mode = os.environ.get("DEMO_LIVE_UPLOAD") == "1"
-    print(f"\n--- Reseeding Database (DEMO_LIVE_UPLOAD={'1 (INST04 skipped)' if demo_live_mode else '0 (All 10 seeded)'}) ---")
+    print("\n--- Reseeding Database ---")
+    if demo_live_mode:
+        print("DEMO_LIVE_UPLOAD=1 is active: INST04 will be skipped during seeding.")
+    else:
+        print("DEMO_LIVE_UPLOAD=0: All 10 applications will be seeded.")
 
     with Session(engine) as session:
         seed_database_if_empty(session, force=True)
         apps = session.exec(select(Application).order_by(Application.id)).all()
-        print(f"[OK] Seeded {len(apps)} applications:")
+        inst04_present = any(a.institution_id == "INST04" for a in apps)
+        inst04_status = "skipped (DEMO_LIVE_UPLOAD=1)" if not inst04_present else "seeded (DEMO_LIVE_UPLOAD=0)"
+        print(f"[OK] Seeded {len(apps)} applications. INST04 was {inst04_status}:")
         for a in apps:
             print(f"   • {a.institution_id}: {a.application_no} ({a.category})")
 
@@ -128,7 +144,7 @@ def reseed_and_run():
             session.refresh(a)
             print(f"   [OK] [{a.institution_id}] Risk: {a.risk_band} ({a.risk_score} pts) | Findings: {len(a.findings or [])}")
 
-    print("\n[OK] Demo reset complete! Everything is seeded, cached, and ready for recording.")
+    print(f"\n[OK] Demo reset complete! {len(apps)} applications seeded (INST04 {inst04_status}). Ready for recording.")
 
 
 def main():
@@ -142,3 +158,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

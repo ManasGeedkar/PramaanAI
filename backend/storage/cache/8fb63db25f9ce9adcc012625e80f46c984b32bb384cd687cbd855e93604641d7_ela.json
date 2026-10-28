@@ -1,0 +1,1 @@
+{"tamper_items": [{"field": "valid_till", "ratio": 2.1769506523890434, "severity": "critical", "explanation": "Edited region around 'valid_till' value (single-compressed patch on double-compressed scan, ELA ratio 2.18 > 1.6)", "bbox": [226.4, 337.4, 285.6, 347.6], "value": "2028-03-31"}]}

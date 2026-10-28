@@ -77,7 +77,7 @@ export const Overview: React.FC = () => {
     manual_review: { label: 'Manual Review', color: '#ca8a04' },
   };
 
-  const verifChartData = Object.entries(stats.by_verification_status).map(([st, count]) => ({
+  const verifChartData = Object.entries(stats.by_verification_status || {}).map(([st, count]) => ({
     name: statusLabels[st]?.label || st,
     count,
     color: statusLabels[st]?.color || '#64748b',

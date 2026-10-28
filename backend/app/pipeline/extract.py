@@ -12,12 +12,19 @@ from app.pipeline.classify import classify_document
 from app.pipeline.qr import detect_and_decode_qr
 from app.pipeline.cache import get_cached, set_cached
 
-# Initialize RapidOCR with pytesseract fallback
-try:
-    from rapidocr_onnxruntime import RapidOCR
-    rapid_ocr = RapidOCR()
-except Exception:
-    rapid_ocr = None
+# Lazy loader for RapidOCR to conserve memory when OCR caches are present
+_rapid_ocr = None
+
+def get_rapid_ocr():
+    global _rapid_ocr
+    if _rapid_ocr is None:
+        try:
+            from rapidocr_onnxruntime import RapidOCR
+            _rapid_ocr = RapidOCR()
+        except Exception as e:
+            print(f"Warning: Failed to load RapidOCR: {e}")
+            _rapid_ocr = None
+    return _rapid_ocr
 
 def clean_label(text: str) -> str:
     """Normalize label text for robust anchor matching against OCR noise."""
@@ -265,8 +272,9 @@ def extract_document(doc_record: Document, session: Session) -> List[ExtractedFi
                     pix = page.get_pixmap(dpi=200)
                     img_bytes = pix.tobytes("png")
                     page_scores = []
-                    if rapid_ocr:
-                        ocr_res, _ = rapid_ocr(img_bytes)
+                    ocr_engine = get_rapid_ocr()
+                    if ocr_engine:
+                        ocr_res, _ = ocr_engine(img_bytes)
                         if ocr_res:
                             for item in ocr_res:
                                 box, text, score = item

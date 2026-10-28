@@ -1,11 +1,13 @@
-﻿# Python
+# Python
 __pycache__/
 *.pyc
 venv/
 .venv/
 
 # Backend runtime data
-backend/storage/
+backend/storage/*
+!backend/storage/ocr_cache/
+!backend/storage/cache/
 backend/*_brief.pdf
 .env
 

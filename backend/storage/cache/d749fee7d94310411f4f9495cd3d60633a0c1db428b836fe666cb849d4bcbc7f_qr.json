@@ -1,0 +1,1 @@
+{"qr_dict": {"raw": "MOCKVERIFY|SPFES|FIRE_NOC|SPFES/NOC/2023/4622|HOLDER=INST03|VALID_TILL=2026-03-31|SIG=49599b3d9c", "issuer": "SPFES", "type": "FIRE_NOC", "reference": "SPFES/NOC/2023/4622", "holder": "INST03", "valid_till": "2026-03-31", "sig": "49599b3d9c"}, "qr_bbox": [438.7, 589.4, 529.0, 679.7], "qr_page": 1}

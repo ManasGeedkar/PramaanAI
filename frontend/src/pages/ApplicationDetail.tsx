@@ -163,13 +163,13 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
         setActiveDocId(data.documents[0].id);
       }
 
-      // Check if finding is specified in URL search params (by code or id)
+      // Check if finding is specified in URL search params (prioritize numeric ID, fallback to code)
       const findingQuery = searchParams.get('finding');
       let targetFinding = null;
       if (findingQuery && data.findings && data.findings.length > 0) {
-        targetFinding = data.findings.find(
-          (f) => f.code === findingQuery || String(f.id) === findingQuery
-        );
+        targetFinding =
+          data.findings.find((f) => String(f.id) === findingQuery) ||
+          data.findings.find((f) => f.code === findingQuery);
       }
 
       if (targetFinding) {
@@ -193,7 +193,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   useEffect(() => {
     if (!app || !selectedFindingId) return;
 
-    const finding = app.findings.find((f) => f.id === selectedFindingId);
+    const finding = (app.findings || []).find((f) => f.id === selectedFindingId);
     if (!finding) return;
 
     const evidenceItems = finding.evidence?.items || [];
@@ -204,8 +204,8 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
 
     if (finding.code === 'CROSS_DOC_MISMATCH' && uniqueDocIds.length >= 2) {
       // Setup side-by-side view
-      const doc1 = app.documents.find((d) => d.id === uniqueDocIds[0]);
-      const doc2 = app.documents.find((d) => d.id === uniqueDocIds[1]);
+      const doc1 = (app.documents || []).find((d) => d.id === uniqueDocIds[0]);
+      const doc2 = (app.documents || []).find((d) => d.id === uniqueDocIds[1]);
 
       const item1 = docItems.find((it) => it.document_id === uniqueDocIds[0]);
       const item2 = docItems.find((it) => it.document_id === uniqueDocIds[1]);
@@ -277,10 +277,26 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
     setSearchParams(nextParams, { replace: true });
   };
 
+  // Sync state if URL search parameters change (Back/Forward navigation)
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    setPageTab(tabParam === 'graph' ? 'entity_graph' : 'scrutiny');
+
+    const findingQuery = searchParams.get('finding');
+    if (findingQuery && app?.findings && app.findings.length > 0) {
+      const match =
+        app.findings.find((f) => String(f.id) === findingQuery) ||
+        app.findings.find((f) => f.code === findingQuery);
+      if (match && match.id !== selectedFindingId) {
+        setSelectedFindingId(match.id);
+      }
+    }
+  }, [searchParams, app?.findings]);
+
   const handleFindingSelect = (finding: any) => {
     setSelectedFindingId(finding.id);
     const nextParams = new URLSearchParams(searchParams);
-    nextParams.set('finding', finding.code || String(finding.id));
+    nextParams.set('finding', String(finding.id));
     setSearchParams(nextParams, { replace: true });
   };
 
@@ -410,12 +426,12 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
   // Active document & bounding boxes for single view
   const activeDocument = useMemo(() => {
     if (!app || !activeDocId) return null;
-    return app.documents.find((d) => d.id === activeDocId) || app.documents[0] || null;
+    return (app.documents || []).find((d) => d.id === activeDocId) || (app.documents || [])[0] || null;
   }, [app, activeDocId]);
 
   const activeFinding = useMemo(() => {
     if (!app || !selectedFindingId) return null;
-    return app.findings.find((f) => f.id === selectedFindingId) || null;
+    return (app.findings || []).find((f) => f.id === selectedFindingId) || null;
   }, [app, selectedFindingId]);
 
   const activeHighlightBoxes = useMemo((): BoundingBox[] => {
@@ -432,15 +448,15 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
 
   const filteredFindings = useMemo(() => {
     if (!app) return [];
-    if (severityFilter === 'all') return app.findings;
-    return app.findings.filter((f) => f.severity === severityFilter);
+    if (severityFilter === 'all') return app.findings || [];
+    return (app.findings || []).filter((f) => f.severity === severityFilter);
   }, [app, severityFilter]);
 
   // Check which tabs have findings (strictly counting number of findings per document)
   const documentFindingCounts = useMemo(() => {
     const counts: Record<number, number> = {};
     if (!app) return counts;
-    for (const f of app.findings) {
+    for (const f of app.findings || []) {
       const docIds = new Set<number>();
       if (f.document_id) {
         docIds.add(f.document_id);
@@ -641,7 +657,7 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
               <div className="flex items-center gap-2">
                 <ShieldAlert className="w-4 h-4 text-blue-900" />
                 <h2 className="text-sm font-bold text-slate-900">
-                  Scrutiny Findings ({app.findings.length})
+                  Scrutiny Findings ({(app.findings || []).length})
                 </h2>
               </div>
 
@@ -650,8 +666,8 @@ export const ApplicationDetail: React.FC<ApplicationDetailProps> = ({
                 {(['all', 'critical', 'warning', 'info'] as const).map((sev) => {
                   const count =
                     sev === 'all'
-                      ? app.findings.length
-                      : app.findings.filter((f) => f.severity === sev).length;
+                      ? (app.findings || []).length
+                      : (app.findings || []).filter((f) => f.severity === sev).length;
                   return (
                     <button
                       key={sev}

@@ -91,21 +91,24 @@ if FRONTEND_DIST.exists():
 
 @app.get("/health")
 def health():
-    return {"status": "healthy"}
+    return {"status": "ok"}
 
 
-RESERVED_SPA_PREFIXES = ("api/", "mock/", "docs", "redoc", "openapi.json", "health")
+RESERVED_SPA_PREFIXES = ("api", "mock", "docs", "redoc", "openapi.json", "health")
 
 
 @app.get("/{full_path:path}")
 def serve_spa(full_path: str):
     clean_path = full_path.lstrip("/")
 
-    # If the requested path starts with api/, mock/, docs, redoc, openapi.json or health,
-    # return a JSON 404 rather than the SPA index.html
+    # Disallow SPA catch-all for API or system endpoints
     for prefix in RESERVED_SPA_PREFIXES:
-        base = prefix.rstrip("/")
-        if clean_path == base or clean_path.startswith(f"{base}/"):
+        if (
+            clean_path == prefix
+            or clean_path.startswith(f"{prefix}/")
+            or clean_path.rstrip("/") == prefix
+            or (prefix == "openapi.json" and clean_path.startswith("openapi.json"))
+        ):
             raise HTTPException(status_code=404, detail="Not Found")
 
     if FRONTEND_DIST.exists():
@@ -117,8 +120,12 @@ def serve_spa(full_path: str):
         if index_html.is_file():
             return FileResponse(index_html)
 
-    return {
-        "service": "PramaanAI Backend",
-        "status": "online",
-        "docs_url": "/docs"
-    }
+    if not clean_path:
+        return {
+            "service": "PramaanAI Backend",
+            "status": "online",
+            "docs_url": "/docs"
+        }
+
+    raise HTTPException(status_code=404, detail="Not Found")
+
